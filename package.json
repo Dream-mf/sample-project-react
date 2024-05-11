@@ -1,21 +1,28 @@
 {
-  "name": "microfrontends-react",
-  "version": "2.0.0",
-  "description": "Microfrontends using a React Host and React Remotes",
-  "scripts": {
-    "start": "pnpm -r --reporter append-only --no-bail --workspace-concurrency 100 start"
-  },
-  "keywords": [],
-  "author": "Chris Fryer <cfryerdev@gmail.com>",
-  "license": "MIT",
-  "devDependencies": {
+	"name": "microfrontends-react",
+	"version": "2.0.0",
+	"description": "Microfrontends using a React Host and React Remotes",
+	"scripts": {
+		"start": "pnpm -r --reporter append-only --no-bail --workspace-concurrency 100 start"
+	},
+	"keywords": [],
+	"author": "Chris Fryer <cfryerdev@gmail.com>",
+	"license": "MIT",
+	"dependencies": {
+		"@module-federation/enhanced": "0.1.12"
+	},
+	"devDependencies": {
 		"@biomejs/biome": "1.5.3",
+		"@rspack/cli": "^0.6.5",
+		"@rspack/core": "^0.6.5",
+		"@rspack/plugin-react-refresh": "^0.6.5",
+		"@swc/helpers": "0.5.11",
 		"@types/node": "^18.17.17",
 		"@typescript-eslint/eslint-plugin": "^5.62.0",
 		"@typescript-eslint/parser": "^5.62.0",
 		"css-loader": "^6.8.1",
 		"dotenv": "16.0.1",
-		"dotenv-webpack": "7.1.0",
+		"dotenv-webpack": "8.1.0",
 		"esbuild-loader": "^3.2.0",
 		"eslint": "^8.49.0",
 		"eslint-config-prettier": "^9.0.0",
@@ -26,9 +33,11 @@
 		"postcss-loader": "^7.3.3",
 		"postcss-normalize": "^10.0.1",
 		"postcss-preset-env": "^8.5.1",
+		"react-refresh": "^0.14.2",
 		"sass": "^1.67.0",
 		"sass-loader": "^13.3.2",
 		"sass-mq": "^6.0.0",
+		"ts-node": "10.9.2",
 		"tsconfig-paths-webpack-plugin": "^4.1.0",
 		"typescript": "^5.2.2",
 		"typescript-plugin-css-modules": "^5.0.1",
@@ -36,5 +45,7 @@
 		"webpack-cli": "^5.0.1",
 		"webpack-dev-server": "^4.11.1"
 	},
-	"workspaces": ["shared"]
+	"workspaces": [
+		"shared"
+	]
 }
