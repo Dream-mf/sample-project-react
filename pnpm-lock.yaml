@@ -18,6 +18,9 @@ importers:
       '@rspack/cli':
         specifier: ^0.6.5
         version: 0.6.5(@rspack/core@0.6.5)(webpack-cli@5.0.1)(webpack@5.76.1)
+      '@rspack/core':
+        specifier: ^0.6.5
+        version: 0.6.5(@swc/helpers@0.5.11)
       '@rspack/plugin-react-refresh':
         specifier: ^0.6.5
         version: 0.6.5(react-refresh@0.14.2)

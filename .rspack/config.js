@@ -1,3 +1,5 @@
+// @ts-check
+
 const path = require("path");
 const {
 	ModuleFederationPlugin,
@@ -7,17 +9,18 @@ const DotenvPlugin = require("dotenv-webpack");
 const rspack = require("@rspack/core");
 const loaders = require("./loaders");
 const defaults = require("./defaults");
+const { defineConfig } = require("@rspack/cli");
 
 /**
- * @param {Object} properties.customConfig Config overrides to pass to the WebPackConfig and ModuleFederationPlugin.
- * @param {boolean} [properties.isTypescript] Whether or not this module uses Typescript.
+ * @param {Object} customConfig Config overrides to pass to the WebPackConfig and ModuleFederationPlugin.
+ * @param {boolean} [isTypescript] Whether or not this module uses Typescript.
  */
 const withBaseRSPack = (customConfig, isTypescript) => {
 	loaders.envLoader();
 
 	const prod = process.env.NODE_ENV === "production";
 
-	return {
+	return defineConfig({
 		entry: `./src/index.${isTypescript ? "ts" : "js"}`,
 		mode: prod ? "production" : "development",
 		devtool:
@@ -35,19 +38,11 @@ const withBaseRSPack = (customConfig, isTypescript) => {
 				"@shared": path.resolve(__dirname, "../shared"),
 			},
 		},
-		ignoreWarnings: [
-			{
-				module: /src\/styles\/index.scss/,
-				message:
-					/autoprefixer: start value has mixed support, consider using flex-start instead/,
-			},
-		],
 		module: {
 			rules: [
 				{
 					test: /\.(j|t)s$/,
 					exclude: [/[\\/]node_modules[\\/]/],
-					loader: "esbuild-loader",
 					loader: "builtin:swc-loader",
 					options: {
 						jsc: {
@@ -71,7 +66,6 @@ const withBaseRSPack = (customConfig, isTypescript) => {
 				{
 					test: /\.(j|t)sx$/,
 					exclude: [/[\\/]node_modules[\\/]/],
-					loader: "esbuild-loader",
 					loader: "builtin:swc-loader",
 					options: {
 						jsc: {
@@ -98,9 +92,7 @@ const withBaseRSPack = (customConfig, isTypescript) => {
 					use: [
 						{
 							loader: "sass-loader",
-							options: {
-								// ...
-							},
+							options: {},
 						},
 					],
 					type: "css/auto",
@@ -108,6 +100,7 @@ const withBaseRSPack = (customConfig, isTypescript) => {
 				{ test: /\.(png|svg|jpg|jpeg|mp3)$/, type: "asset/resource" },
 			],
 		},
+		//@ts-expect-error
 		plugins: [
 			new DotenvPlugin({
 				systemvars: true,
@@ -124,7 +117,7 @@ const withBaseRSPack = (customConfig, isTypescript) => {
 			}),
 			!prod && new ReactRefreshPlugin(),
 		].filter(Boolean),
-	};
+	});
 };
 
 module.exports = {
