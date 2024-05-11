@@ -25,7 +25,8 @@
 		"skipDefaultLibCheck": true,
 		"forceConsistentCasingInFileNames": true,
 		"sourceMap": true,
-		"target": "ES2018"
+		"target": "ES2018",
+    "isolatedModules": true
 		// BUG - https://github.com/microsoft/TypeScript/issues/42873
 		// "preserveSymlinks": true
 	},
