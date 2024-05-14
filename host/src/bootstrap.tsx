@@ -1,6 +1,6 @@
 import App from "./_app";
 import * as ReactDOMClient from "react-dom/client";
-import { init } from "@module-federation/enhanced/runtime";
+import { init, preloadRemote } from "@module-federation/enhanced/runtime";
 
 init({
 	name: "container",
