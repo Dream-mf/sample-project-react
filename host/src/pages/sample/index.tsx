@@ -1,17 +1,16 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import importRemote from '../../utilities/dynamic-remotes';
+import { importRemote, ImportRemoteOptions } from '@dream.mf/utilities';
 import Layout from "../../layout";
 
 // @ts-ignore
 const SampleRemote = React.lazy(() =>
     importRemote({
-        configApiUrl: process.env.CONFIG_API!,
-        remoteName: 'Sample',
+        remoteUrl: 'http://localhost:3002/remote.js',
         scope: 'remote_sample',
         module: 'Application',
         remoteUrlFallback: null
-    })
+    } as ImportRemoteOptions)
 );
 
 const SamplePage = () => {
