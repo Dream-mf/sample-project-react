@@ -11,6 +11,9 @@ importers:
       '@module-federation/enhanced':
         specifier: 0.1.13
         version: 0.1.13(typescript@5.4.5)(vue-tsc@1.8.27)(webpack@5.76.1)
+      '@module-federation/runtime':
+        specifier: 0.1.13
+        version: 0.1.13
     devDependencies:
       '@biomejs/biome':
         specifier: 1.5.3

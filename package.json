@@ -9,7 +9,8 @@
 	"author": "Chris Fryer <cfryerdev@gmail.com>",
 	"license": "MIT",
 	"dependencies": {
-		"@module-federation/enhanced": "0.1.13"
+		"@module-federation/enhanced": "0.1.13",
+		"@module-federation/runtime": "0.1.13"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "1.5.3",

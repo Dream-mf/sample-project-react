@@ -18,9 +18,7 @@ const SamplePage = () => {
 	let { id } = useParams();
 	return (
 		<Layout>
-			<Suspense>
-				<SampleRemote id={id} />
-			</Suspense>
+			<SampleRemote id={id} />
 		</Layout>
 	);
 };

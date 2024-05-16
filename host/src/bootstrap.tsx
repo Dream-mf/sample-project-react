@@ -1,21 +1,27 @@
 import App from "./_app";
 import * as ReactDOMClient from "react-dom/client";
-import { init, preloadRemote } from "@module-federation/enhanced/runtime";
+import { init } from "@module-federation/enhanced/runtime";
+import DynamicRemotes from "./utilities/dynamic-remotes-plugin";
 
-init({
+const host = init({
 	name: "container",
 	remotes: [
 		{
 			name: "remote_sample",
 			entry: "http://localhost:3002/mf-manifest.json",
 		},
+		{
+			name: "remote_home",
+			entry: "",
+			alias: "Home",
+		},
 	],
 });
 
-preloadRemote([
-	{
-		nameOrAlias: "remote_sample",
-	},
+host.registerPlugins([
+	DynamicRemotes({
+		baseUrl: process.env.CONFIG_API,
+	}),
 ]);
 
 const rootElement = document.getElementById("root");
