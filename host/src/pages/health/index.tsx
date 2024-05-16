@@ -1,5 +1,5 @@
 import React, { Suspense, useEffect, useState } from 'react';
-import importRemote from '../../utilities/dynamic-remotes';
+import { importRemote } from '@dream.mf/utilities';
 import Layout from "../../layout";
 import ErrorBoundary from "@shared/components/error-boundary";
 import RemoteHealthComponent from "@shared/components/remote-health-component";
@@ -21,11 +21,10 @@ interface RemoteResponse {
 const RemoteWrapper = ({ remoteName, scope, fallBackUrl, module = './Health' }: RemoteProps) => {
   const RemoteHealthComponent = React.lazy(() =>
     importRemote({
-      configApiUrl: process.env.CONFIG_API!,
-      remoteName,
-      scope,
-      module,
-      remoteUrlFallback: fallBackUrl
+      remoteUrl: fallBackUrl,
+      scope: scope,
+      module: module,
+      remoteUrlFallback: null
     })
   );
   return (

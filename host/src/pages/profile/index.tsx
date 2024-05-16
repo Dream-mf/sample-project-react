@@ -1,15 +1,15 @@
 
 import React, { Suspense } from "react";
 import PageLoader from "../../components/page-loader";
-import importRemote from '../../utilities/dynamic-remotes';
+import { importRemote } from '@dream.mf/utilities';
 
 // @ts-ignore
 const ProfileRemote = React.lazy(() =>
     importRemote({
-        configApiUrl: process.env.CONFIG_API!,
-        remoteName: 'Profile',
+        remoteUrl: 'http://localhost:3003/remote.js',
         scope: 'remote_profile',
-        module: 'Application'
+        module: 'Application',
+        remoteUrlFallback: null
     })
 );
 

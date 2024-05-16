@@ -1,13 +1,12 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import importRemote from '../../utilities/dynamic-remotes';
+import { importRemote, ImportRemoteOptions } from '@dream.mf/utilities';
 import Layout from "../../layout";
 
 // @ts-ignore
 const HomeRemote = React.lazy(() =>
     importRemote({
-        configApiUrl: process.env.CONFIG_API!,
-        remoteName: 'Home',
+        remoteUrl: 'http://localhost:3001/remote.js',
         scope: 'remote_home',
         module: 'Application',
         remoteUrlFallback: null
