@@ -2,6 +2,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import { importRemote, ImportRemoteOptions } from '@dream.mf/utilities';
 import Layout from "../../layout";
+import { DreamMFContextGuard } from "@dream.mf/oidc";
 
 // @ts-ignore
 const SampleRemote = React.lazy(() =>
@@ -15,7 +16,12 @@ const SampleRemote = React.lazy(() =>
 
 const SamplePage = () => {
     let { id } = useParams();
-    return (<Layout><SampleRemote id={id} /></Layout>);
+    return (
+        <Layout>
+            <DreamMFContextGuard fallback={<>Loading...</>} />
+            <SampleRemote id={id} />
+        </Layout>
+    );
 }
 
 export default SamplePage;

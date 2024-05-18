@@ -111,12 +111,18 @@ importers:
 
   host:
     dependencies:
+      '@dream.mf/bundlers':
+        specifier: 0.0.7
+        version: 0.0.7(@swc/helpers@0.5.11)(@types/eslint@8.56.10)(@types/express@4.17.21)(browserslist@4.23.0)(prettier@3.2.5)(react-refresh@0.14.2)(ts-node@10.9.2(@types/node@15.14.9)(typescript@4.4.2))(typescript@4.4.2)(vue-tsc@1.8.27(typescript@4.4.2))
       '@dream.mf/core':
-        specifier: 1.2.2
-        version: 1.2.2
+        specifier: 1.2.3
+        version: 1.2.3
       '@dream.mf/logging':
-        specifier: 1.2.2
-        version: 1.2.2
+        specifier: 1.2.3
+        version: 1.2.3
+      '@dream.mf/oidc':
+        specifier: 0.9.0
+        version: 0.9.0(typescript@4.4.2)(vue-tsc@1.8.27(typescript@4.4.2))(webpack@5.76.1(webpack-cli@5.0.1))
       '@dream.mf/utilities':
         specifier: 0.9.7
         version: 0.9.7
@@ -184,6 +190,9 @@ importers:
 
   remotes/home:
     dependencies:
+      '@dream.mf/bundlers':
+        specifier: 0.0.5
+        version: 0.0.5(@rspack/core@0.6.5(@swc/helpers@0.5.11))(@types/eslint@8.56.10)(browserslist@4.23.0)(prettier@3.2.5)(ts-node@10.9.2(@types/node@18.19.31)(typescript@5.4.5))(typescript@5.4.5)(vue-tsc@1.8.27(typescript@5.4.5))
       react:
         specifier: 18.2.0
         version: 18.2.0
@@ -227,6 +236,9 @@ importers:
 
   remotes/profile:
     dependencies:
+      '@dream.mf/bundlers':
+        specifier: 0.0.5
+        version: 0.0.5(@rspack/core@0.6.5(@swc/helpers@0.5.11))(@types/eslint@8.56.10)(browserslist@4.23.0)(prettier@3.2.5)(ts-node@10.9.2(@types/node@15.14.9)(typescript@4.4.2))(typescript@4.4.2)(vue-tsc@1.8.27(typescript@4.4.2))
       react:
         specifier: 18.2.0
         version: 18.2.0
@@ -282,6 +294,9 @@ importers:
 
   remotes/sample:
     dependencies:
+      '@dream.mf/bundlers':
+        specifier: 0.0.5
+        version: 0.0.5(@rspack/core@0.6.5(@swc/helpers@0.5.11))(@types/eslint@8.56.10)(browserslist@4.23.0)(prettier@3.2.5)(ts-node@10.9.2(@types/node@18.19.31)(typescript@5.4.5))(typescript@5.4.5)(vue-tsc@1.8.27(typescript@5.4.5))
       react:
         specifier: 18.2.0
         version: 18.2.0
@@ -831,6 +846,14 @@ packages:
     resolution: {integrity: sha512-dBVuXR082gk3jsFp7Rd/JI4kytwGHecnCoTtXFb7DB6CNHp4rg5k1bhg0nWdLGLnOV71lmDzGQaLMy8iPLY0pw==}
     engines: {node: '>=10.0.0'}
 
+  '@dream.mf/bundlers@0.0.5':
+    resolution: {integrity: sha512-HBm0xAdKGj2Ov7XvXs7HpnQWdesMveX8Cf8bpCsomzTJiuuXFgc90qDJcqis0DXViETY2vi6iVwwW+fTUBOKVQ==}
+    engines: {node: '>=16', npm: '>=8'}
+
+  '@dream.mf/bundlers@0.0.7':
+    resolution: {integrity: sha512-vdDgc/NGVvuA+5WFXwScjaRSxcKktmptQ7hTBKz71fYRNyi9/q+nE2S9fNMyDKgfhG0168lxny/xezJSxsEyLQ==}
+    engines: {node: '>=16', npm: '>=8'}
+
   '@dream.mf/core@1.1.2':
     resolution: {integrity: sha512-cRa4VxL0m5oxj9W2GGnZiGd0wGXmnZrOqQbb1Da3RnM/TeLXnva4jy042j0Fsxznrga1bTCSAU4TyUNwVSXGoA==}
     engines: {node: '>=16', npm: '>=8'}
@@ -843,13 +866,25 @@ packages:
     resolution: {integrity: sha512-Fp/lrzN4uvwz2YZHvn45wL/ijl30dDs2iGvn4NJ6/B1r2kIpdS3S8shIxS9H1HV9Smf1ck+NXjk7Ac8ACOE/GQ==}
     engines: {node: '>=16', npm: '>=8'}
 
+  '@dream.mf/core@1.2.3':
+    resolution: {integrity: sha512-3cRE6p4tuOX4J363P+7FtFV9vhT3FkjKi4xgCDOvoY7HyleW9pK4iIT/uY+Olz8nHW7km/dr2ey4TZsbUkmnGA==}
+    engines: {node: '>=16', npm: '>=8'}
+
+  '@dream.mf/logging@1.0.2':
+    resolution: {integrity: sha512-aIMPeDBmhm6i2QVz2OknKjJhy/uXXhEC83EkBpfE6hJnjvMyjq5yMjAYsTM1/vd9J8SpddLIwFDSxzZne8YJsg==}
+    engines: {node: '>=16', npm: '>=8'}
+
   '@dream.mf/logging@1.1.2':
     resolution: {integrity: sha512-dP5SMo4wtYOoNDf6xabkVA16GFUzvcdQLtC135f6iAU84YKzQ+hOEnEIEhZyQiVHM5YBz19ewrV1ZrBqUB+grQ==}
     engines: {node: '>=16', npm: '>=8'}
 
-  '@dream.mf/logging@1.2.2':
-    resolution: {integrity: sha512-FrOVJ/tXXNugGkOpfycDlkMFyG5jx7y3D+RuvtG8txQ0wnwC1AdrsQLFyp2HDHBFWNpzIOcBCsNWbO+nign30A==}
+  '@dream.mf/logging@1.2.3':
+    resolution: {integrity: sha512-GJeU0MZFPFcfj+jJqeA6Pl0LDhu1/kZTgkwJ48BTct1mJwKhtgN15530DxTj9xcyJUx6IGjE8kBMSFcAxgPpzA==}
     engines: {node: '>=16', npm: '>=8', pnpm: '>=9'}
+
+  '@dream.mf/oidc@0.9.0':
+    resolution: {integrity: sha512-vcF3hVcPLYe8GpwDTuOOkAdNaedNx27C+v3m0iksPzuORoaf7YuM7RMFc5e3UXzb7LpcYSpCfIukFqCxuGAnDw==}
+    engines: {node: '>=16', npm: '>=8'}
 
   '@dream.mf/utilities@0.9.7':
     resolution: {integrity: sha512-C4rOZoWxQsjhbu+e6HhToIBBS2pO78Lr1plQVc55CLPNwC8I8U12CLxocDvdyO8JB/lLWY9x3LrmL2y0bn9wvA==}
@@ -1105,11 +1140,25 @@ packages:
   '@microsoft/dynamicproto-js@2.0.3':
     resolution: {integrity: sha512-JTWTU80rMy3mdxOjjpaiDQsTLZ6YSGGqsjURsY6AUQtIj0udlF/jYmhdLZu8693ZIC0T1IwYnFa0+QeiMnziBA==}
 
+  '@module-federation/dts-plugin@0.1.11':
+    resolution: {integrity: sha512-Lv8oTNOFx4MEXBCOYtpecWzQGsUXG8QxHXMUGQwAPNeYvdtnR+l38m04Jc9bM/jlvVt+ScM7mV5EybnvmcS3cw==}
+    peerDependencies:
+      typescript: ^4.9.0 || ^5.0.0
+      vue-tsc: ^1.0.24
+
   '@module-federation/dts-plugin@0.1.12':
     resolution: {integrity: sha512-v2SFMXjPMh4wnhkXaTKAPIe9pIGuDYTImFwoXl7FpaQpKrnqcGMLMXlHAqIxzcIWsjL/Qtf7S1T1d5lbmRlyyA==}
     peerDependencies:
       typescript: ^4.9.0 || ^5.0.0
       vue-tsc: ^1.0.24
+
+  '@module-federation/enhanced@0.1.11':
+    resolution: {integrity: sha512-wVeovWMgHsu5uBZI3u7G/lBlA3JWjDy7hyLGeT38/jcD2WPx8U66W9jIqiVI0sn+4Yznznb2K+rNFeD7hTYBGQ==}
+    peerDependencies:
+      webpack: ^5.0.0
+    peerDependenciesMeta:
+      webpack:
+        optional: true
 
   '@module-federation/enhanced@0.1.12':
     resolution: {integrity: sha512-wSl96rMcuJkVdlJIxPKZJ5+vjN05xL4qODoaL3LGUiSUvDx1m/zehRhGh1S4E9nfxUif8EaCDgSMN/6vIUISAQ==}
@@ -1119,20 +1168,35 @@ packages:
       webpack:
         optional: true
 
+  '@module-federation/managers@0.1.11':
+    resolution: {integrity: sha512-29mP2rZVFMu10CAiljZiD19r1ynHreF4fBaXWSrLRCRRZSgRv4XMJV5s9RJ8OetygI6j9OuZmPG1RTUsSZLTmw==}
+
   '@module-federation/managers@0.1.12':
     resolution: {integrity: sha512-uFWbz0HJZZ44GGCFj28QxanJ5Bx8T285Q+PdV/LV2W48ytBnRsGAjLHPIqVk6cbam/BElO5zLUqUsuhn0si6vg==}
+
+  '@module-federation/manifest@0.1.11':
+    resolution: {integrity: sha512-RM4ef0Za0DD7QCGp9eR6gy1B5VX3DxkjRgJpZ04Kh/Xaa1ewnKkSejzYpEvD+bLCir8QViv0lrnH55ln7pLn/Q==}
 
   '@module-federation/manifest@0.1.12':
     resolution: {integrity: sha512-HCVdNetUSQ+fOSkEphzfiiXAHDu/z6wShy86Po8DpwJEFmrFlPslCPKJUVwpY2EP4oL38UUYApNsE5WIXKcXiA==}
 
+  '@module-federation/rspack@0.1.11':
+    resolution: {integrity: sha512-+2uYviFL8mib8iBYd9kNBPmkOUxmH66XjZyN9ZZMtIo6znqfkIQrWZ1H0VRULTUp/EQilzYZ4bf33NU+V5DS7Q==}
+
   '@module-federation/rspack@0.1.12':
     resolution: {integrity: sha512-LpWK+B8MqHnG6tmlENt8mskQ/UTQTfeonxERfCFmF8pzbXBwmYMVXbX5bBa34jZpD4kguQxqzgUy1gM8HVItsQ==}
+
+  '@module-federation/runtime-tools@0.1.11':
+    resolution: {integrity: sha512-CvEF35WF5mmadH2qXdgDYa1M+AWNh3Tu+krVTegngixmEYX8OIaB0x4U+9QNA3Bs4GHsR86f7VrT29TY4elUCA==}
 
   '@module-federation/runtime-tools@0.1.12':
     resolution: {integrity: sha512-M3SsY39qhchFNNcL/ILXJjijzKMuK62+4ezTm/nP9zO5tdXBgwzcHXcKzEq3TuRUNOcMNCN9Snoccw97IJA4gQ==}
 
   '@module-federation/runtime-tools@0.1.6':
     resolution: {integrity: sha512-7ILVnzMIa0Dlc0Blck5tVZG1tnk1MmLnuZpLOMpbdW+zl+N6wdMjjHMjEZFCUAJh2E5XJ3BREwfX8Ets0nIkLg==}
+
+  '@module-federation/runtime@0.1.11':
+    resolution: {integrity: sha512-oHsPHAzIKM2arTZZaa22Xn0A189q/bxxX93YJjIawyms/NMaIhEvs7PDz5loOgEuAWP4q1h960hG/aRwFuxwAA==}
 
   '@module-federation/runtime@0.1.12':
     resolution: {integrity: sha512-Sd97ggU4mvyR6Avya5f3ym++4S6jbo3HT7S7cINRhepa34d5Bu09O7qSEZ9g+LOG+XBjEp3+b557d3gss0jydw==}
@@ -1143,6 +1207,9 @@ packages:
   '@module-federation/runtime@0.1.6':
     resolution: {integrity: sha512-nj6a+yJ+QxmcE89qmrTl4lphBIoAds0PFPVGnqLRWflwAP88jrCcrrTqRhARegkFDL+wE9AE04+h6jzlbIfMKg==}
 
+  '@module-federation/sdk@0.1.11':
+    resolution: {integrity: sha512-IdJmRX+WGmKDrXq3jEOvjB11YrVmysjSnostY5u5tBz7cSO1nTZz+oEBqQdkXvNyPY2R8FErtD7G5gdtQH1k7Q==}
+
   '@module-federation/sdk@0.1.12':
     resolution: {integrity: sha512-OTh6n5RJNgGNzPzYuGs/On4+UC7XFTKqRc/iEmDFZJfao76NYGmKMdCBivlgMhg6oztqBmhtuHxFA05n2McOdw==}
 
@@ -1152,8 +1219,14 @@ packages:
   '@module-federation/sdk@0.1.6':
     resolution: {integrity: sha512-qifXpyYLM7abUeEOIfv0oTkguZgRZuwh89YOAYIZJlkP6QbRG7DJMQvtM8X2yHXm9PTk0IYNnOJH0vNQCo6auQ==}
 
+  '@module-federation/third-party-dts-extractor@0.1.11':
+    resolution: {integrity: sha512-Sly7k9qBaoexFG66N57ppHzuWYaYABqydMzzgmSg8OlHYhfckC7ug949xpw1oq0gj+i6WE+8Ork4wtyzDXJTiw==}
+
   '@module-federation/third-party-dts-extractor@0.1.12':
     resolution: {integrity: sha512-m+lWDQW4dxeSjhZv9cN7Wp6QpPpYFC0QGrY0oycfy/NV2J6FGCU+L3+2Jq12Mcp4K8buWbBTb+e6BpEqlctdvw==}
+
+  '@module-federation/webpack-bundler-runtime@0.1.11':
+    resolution: {integrity: sha512-xgQoCCwv+5Vjv7pKtQh9LTBZOvyVdhs7D80oOdJbN1YXL0PRoNE20RjOH7CwGcu8/Yc99PVCAKS25rai+DzEGw==}
 
   '@module-federation/webpack-bundler-runtime@0.1.12':
     resolution: {integrity: sha512-Yjj2WwdMECdpPTx8/z/3B1qymt3vEyaeIBhtOg7Qra1QplFGlmlauXLf44EMHlgk8h+8/W9djfoEejy4312OOg==}
@@ -2186,6 +2259,12 @@ packages:
 
   dotenv-defaults@2.0.2:
     resolution: {integrity: sha512-iOIzovWfsUHU91L5i8bJce3NYK5JXeAwH50Jh6+ARUdLiiGlYWfGw6UkzsYqaXZH/hjE/eCd/PlfM/qqyK0AMg==}
+
+  dotenv-webpack@7.1.0:
+    resolution: {integrity: sha512-+aUOe+nqgLerA/n611oyC15fY79BIkGm2fOxJAcHDonMZ7AtDpnzv/Oe591eHAenIE0t6w03UyxDnLs/YUxx5Q==}
+    engines: {node: '>=10'}
+    peerDependencies:
+      webpack: ^4 || ^5
 
   dotenv-webpack@8.1.0:
     resolution: {integrity: sha512-owK1JcsPkIobeqjVrk6h7jPED/W6ZpdFsMPR+5ursB7/SdgDyO+VzAU+szK8C8u3qUhtENyYnj8eyXMR5kkGag==}
@@ -5067,11 +5146,173 @@ snapshots:
 
   '@discoveryjs/json-ext@0.5.7': {}
 
+  '@dream.mf/bundlers@0.0.5(@rspack/core@0.6.5(@swc/helpers@0.5.11))(@types/eslint@8.56.10)(browserslist@4.23.0)(prettier@3.2.5)(ts-node@10.9.2(@types/node@15.14.9)(typescript@4.4.2))(typescript@4.4.2)(vue-tsc@1.8.27(typescript@4.4.2))':
+    dependencies:
+      '@dream.mf/core': 1.1.2
+      '@module-federation/enhanced': 0.1.11(typescript@4.4.2)(vue-tsc@1.8.27(typescript@4.4.2))(webpack@5.76.1(webpack-cli@5.0.1))
+      css-loader: 6.11.0(@rspack/core@0.6.5(@swc/helpers@0.5.11))(webpack@5.76.1(webpack-cli@5.0.1))
+      dotenv: 16.0.1
+      dotenv-webpack: 7.1.0(webpack@5.76.1(webpack-cli@5.0.1))
+      esbuild-loader: 3.2.0(webpack@5.76.1(webpack-cli@5.0.1))
+      eslint: 8.57.0
+      eslint-config-prettier: 9.1.0(eslint@8.57.0)
+      eslint-plugin-prettier: 5.1.3(@types/eslint@8.56.10)(eslint-config-prettier@9.1.0(eslint@8.57.0))(eslint@8.57.0)(prettier@3.2.5)
+      html-webpack-plugin: 5.6.0(@rspack/core@0.6.5(@swc/helpers@0.5.11))(webpack@5.76.1(webpack-cli@5.0.1))
+      mini-css-extract-plugin: 2.6.1(webpack@5.76.1(webpack-cli@5.0.1))
+      path: 0.12.7
+      postcss: 8.4.38
+      postcss-loader: 7.3.4(postcss@8.4.38)(typescript@4.4.2)(webpack@5.76.1(webpack-cli@5.0.1))
+      postcss-normalize: 10.0.1(browserslist@4.23.0)(postcss@8.4.38)
+      postcss-preset-env: 8.5.1(postcss@8.4.38)
+      react: 18.1.0
+      react-dom: 18.1.0(react@18.1.0)
+      sass: 1.76.0
+      sass-loader: 13.3.3(sass@1.76.0)(webpack@5.76.1(webpack-cli@5.0.1))
+      sass-mq: 6.0.0
+      tsconfig-paths-webpack-plugin: 4.1.0
+      typescript-plugin-css-modules: 5.1.0(ts-node@10.9.2(@types/node@15.14.9)(typescript@4.4.2))(typescript@4.4.2)
+      webpack: 5.76.1(webpack-cli@5.0.1)
+      webpack-cli: 5.0.1(webpack-dev-server@4.12.0)(webpack@5.76.1)
+      webpack-dev-server: 4.12.0(webpack-cli@5.0.1)(webpack@5.76.1)
+    transitivePeerDependencies:
+      - '@rspack/core'
+      - '@swc/core'
+      - '@types/eslint'
+      - '@webpack-cli/generators'
+      - browserslist
+      - bufferutil
+      - debug
+      - esbuild
+      - fibers
+      - node-sass
+      - prettier
+      - sass-embedded
+      - supports-color
+      - ts-node
+      - typescript
+      - uglify-js
+      - utf-8-validate
+      - vue-tsc
+      - webpack-bundle-analyzer
+
+  '@dream.mf/bundlers@0.0.5(@rspack/core@0.6.5(@swc/helpers@0.5.11))(@types/eslint@8.56.10)(browserslist@4.23.0)(prettier@3.2.5)(ts-node@10.9.2(@types/node@18.19.31)(typescript@5.4.5))(typescript@5.4.5)(vue-tsc@1.8.27(typescript@5.4.5))':
+    dependencies:
+      '@dream.mf/core': 1.1.2
+      '@module-federation/enhanced': 0.1.11(typescript@5.4.5)(vue-tsc@1.8.27(typescript@5.4.5))(webpack@5.76.1(webpack-cli@5.0.1))
+      css-loader: 6.11.0(@rspack/core@0.6.5(@swc/helpers@0.5.11))(webpack@5.76.1(webpack-cli@5.0.1))
+      dotenv: 16.0.1
+      dotenv-webpack: 7.1.0(webpack@5.76.1(webpack-cli@5.0.1))
+      esbuild-loader: 3.2.0(webpack@5.76.1(webpack-cli@5.0.1))
+      eslint: 8.57.0
+      eslint-config-prettier: 9.1.0(eslint@8.57.0)
+      eslint-plugin-prettier: 5.1.3(@types/eslint@8.56.10)(eslint-config-prettier@9.1.0(eslint@8.57.0))(eslint@8.57.0)(prettier@3.2.5)
+      html-webpack-plugin: 5.6.0(@rspack/core@0.6.5(@swc/helpers@0.5.11))(webpack@5.76.1(webpack-cli@5.0.1))
+      mini-css-extract-plugin: 2.6.1(webpack@5.76.1(webpack-cli@5.0.1))
+      path: 0.12.7
+      postcss: 8.4.38
+      postcss-loader: 7.3.4(postcss@8.4.38)(typescript@5.4.5)(webpack@5.76.1(webpack-cli@5.0.1))
+      postcss-normalize: 10.0.1(browserslist@4.23.0)(postcss@8.4.38)
+      postcss-preset-env: 8.5.1(postcss@8.4.38)
+      react: 18.1.0
+      react-dom: 18.1.0(react@18.1.0)
+      sass: 1.76.0
+      sass-loader: 13.3.3(sass@1.76.0)(webpack@5.76.1(webpack-cli@5.0.1))
+      sass-mq: 6.0.0
+      tsconfig-paths-webpack-plugin: 4.1.0
+      typescript-plugin-css-modules: 5.1.0(ts-node@10.9.2(@types/node@18.19.31)(typescript@5.4.5))(typescript@5.4.5)
+      webpack: 5.76.1(webpack-cli@5.0.1)
+      webpack-cli: 5.0.1(webpack-dev-server@4.12.0)(webpack@5.76.1)
+      webpack-dev-server: 4.12.0(webpack-cli@5.0.1)(webpack@5.76.1)
+    transitivePeerDependencies:
+      - '@rspack/core'
+      - '@swc/core'
+      - '@types/eslint'
+      - '@webpack-cli/generators'
+      - browserslist
+      - bufferutil
+      - debug
+      - esbuild
+      - fibers
+      - node-sass
+      - prettier
+      - sass-embedded
+      - supports-color
+      - ts-node
+      - typescript
+      - uglify-js
+      - utf-8-validate
+      - vue-tsc
+      - webpack-bundle-analyzer
+
+  '@dream.mf/bundlers@0.0.7(@swc/helpers@0.5.11)(@types/eslint@8.56.10)(@types/express@4.17.21)(browserslist@4.23.0)(prettier@3.2.5)(react-refresh@0.14.2)(ts-node@10.9.2(@types/node@15.14.9)(typescript@4.4.2))(typescript@4.4.2)(vue-tsc@1.8.27(typescript@4.4.2))':
+    dependencies:
+      '@dream.mf/core': 1.1.2
+      '@module-federation/enhanced': 0.1.11(typescript@4.4.2)(vue-tsc@1.8.27(typescript@4.4.2))(webpack@5.76.1(webpack-cli@5.0.1))
+      '@rspack/binding': 0.6.5
+      '@rspack/cli': 0.6.5(@rspack/core@0.6.5(@swc/helpers@0.5.11))(@types/express@4.17.21)(webpack-cli@5.0.1(webpack-dev-server@4.12.0)(webpack@5.76.1))(webpack@5.76.1(webpack-cli@5.0.1))
+      '@rspack/core': 0.6.5(@swc/helpers@0.5.11)
+      '@rspack/plugin-react-refresh': 0.6.5(react-refresh@0.14.2)
+      '@types/node': 18.19.31
+      css-loader: 6.11.0(@rspack/core@0.6.5(@swc/helpers@0.5.11))(webpack@5.76.1(webpack-cli@5.0.1))
+      dotenv: 16.0.1
+      dotenv-webpack: 7.1.0(webpack@5.76.1(webpack-cli@5.0.1))
+      esbuild-loader: 3.2.0(webpack@5.76.1(webpack-cli@5.0.1))
+      eslint: 8.57.0
+      eslint-config-prettier: 9.1.0(eslint@8.57.0)
+      eslint-plugin-prettier: 5.1.3(@types/eslint@8.56.10)(eslint-config-prettier@9.1.0(eslint@8.57.0))(eslint@8.57.0)(prettier@3.2.5)
+      html-webpack-plugin: 5.6.0(@rspack/core@0.6.5(@swc/helpers@0.5.11))(webpack@5.76.1(webpack-cli@5.0.1))
+      mini-css-extract-plugin: 2.6.1(webpack@5.76.1(webpack-cli@5.0.1))
+      path: 0.12.7
+      postcss: 8.4.38
+      postcss-loader: 7.3.4(postcss@8.4.38)(typescript@4.4.2)(webpack@5.76.1(webpack-cli@5.0.1))
+      postcss-normalize: 10.0.1(browserslist@4.23.0)(postcss@8.4.38)
+      postcss-preset-env: 8.5.1(postcss@8.4.38)
+      react: 18.1.0
+      react-dom: 18.1.0(react@18.1.0)
+      sass: 1.76.0
+      sass-loader: 13.3.3(sass@1.76.0)(webpack@5.76.1(webpack-cli@5.0.1))
+      sass-mq: 6.0.0
+      tsconfig-paths-webpack-plugin: 4.1.0
+      typescript-plugin-css-modules: 5.1.0(ts-node@10.9.2(@types/node@15.14.9)(typescript@4.4.2))(typescript@4.4.2)
+      webpack: 5.76.1(webpack-cli@5.0.1)
+      webpack-cli: 5.0.1(webpack-dev-server@4.12.0)(webpack@5.76.1)
+      webpack-dev-server: 4.12.0(webpack-cli@5.0.1)(webpack@5.76.1)
+    transitivePeerDependencies:
+      - '@swc/core'
+      - '@swc/helpers'
+      - '@types/eslint'
+      - '@types/express'
+      - '@webpack-cli/generators'
+      - browserslist
+      - bufferutil
+      - debug
+      - esbuild
+      - fibers
+      - node-sass
+      - prettier
+      - react-refresh
+      - sass-embedded
+      - supports-color
+      - ts-node
+      - typescript
+      - uglify-js
+      - utf-8-validate
+      - vue-tsc
+      - webpack-bundle-analyzer
+
   '@dream.mf/core@1.1.2': {}
 
   '@dream.mf/core@1.2.1': {}
 
   '@dream.mf/core@1.2.2': {}
+
+  '@dream.mf/core@1.2.3': {}
+
+  '@dream.mf/logging@1.0.2':
+    dependencies:
+      '@dream.mf/core': 1.1.2
+      react: 18.1.0
+      react-dom: 18.1.0(react@18.1.0)
 
   '@dream.mf/logging@1.1.2':
     dependencies:
@@ -5079,11 +5320,35 @@ snapshots:
       react: 18.1.0
       react-dom: 18.1.0(react@18.1.0)
 
-  '@dream.mf/logging@1.2.2':
+  '@dream.mf/logging@1.2.3':
     dependencies:
       '@dream.mf/core': 1.2.2
       react: 18.1.0
       react-dom: 18.1.0(react@18.1.0)
+
+  '@dream.mf/oidc@0.9.0(typescript@4.4.2)(vue-tsc@1.8.27(typescript@4.4.2))(webpack@5.76.1(webpack-cli@5.0.1))':
+    dependencies:
+      '@dream.mf/core': 1.1.2
+      '@dream.mf/logging': 1.0.2
+      '@module-federation/enhanced': 0.1.11(typescript@4.4.2)(vue-tsc@1.8.27(typescript@4.4.2))(webpack@5.76.1(webpack-cli@5.0.1))
+      '@tanstack/query-core': 5.32.1
+      '@tanstack/react-query': 5.32.1(react@18.1.0)
+      oidc-client: 1.11.5
+      oidc-client-ts: 3.0.1
+      react: 18.1.0
+      react-dom: 18.1.0(react@18.1.0)
+      react-oidc-context: 3.1.0(oidc-client-ts@3.0.1)(react@18.1.0)
+      react-router: 6.22.2(react@18.1.0)
+      react-router-dom: 6.22.2(react-dom@18.1.0(react@18.1.0))(react@18.1.0)
+      uuid: 9.0.1
+    transitivePeerDependencies:
+      - bufferutil
+      - debug
+      - supports-color
+      - typescript
+      - utf-8-validate
+      - vue-tsc
+      - webpack
 
   '@dream.mf/utilities@0.9.7':
     dependencies:
@@ -5328,6 +5593,56 @@ snapshots:
     dependencies:
       '@nevware21/ts-utils': 0.11.2
 
+  '@module-federation/dts-plugin@0.1.11(typescript@4.4.2)(vue-tsc@1.8.27(typescript@4.4.2))':
+    dependencies:
+      '@module-federation/managers': 0.1.11
+      '@module-federation/sdk': 0.1.11
+      '@module-federation/third-party-dts-extractor': 0.1.11
+      adm-zip: 0.5.12
+      ansi-colors: 4.1.3
+      axios: 1.6.8
+      chalk: 3.0.0
+      fs-extra: 9.1.0
+      isomorphic-ws: 5.0.0(ws@8.5.0)
+      koa: 2.11.0
+      lodash.clonedeepwith: 4.5.0
+      log4js: 6.9.1
+      node-schedule: 2.1.1
+      rambda: 9.2.0
+      typescript: 4.4.2
+      vue-tsc: 1.8.27(typescript@4.4.2)
+      ws: 8.5.0
+    transitivePeerDependencies:
+      - bufferutil
+      - debug
+      - supports-color
+      - utf-8-validate
+
+  '@module-federation/dts-plugin@0.1.11(typescript@5.4.5)(vue-tsc@1.8.27(typescript@5.4.5))':
+    dependencies:
+      '@module-federation/managers': 0.1.11
+      '@module-federation/sdk': 0.1.11
+      '@module-federation/third-party-dts-extractor': 0.1.11
+      adm-zip: 0.5.12
+      ansi-colors: 4.1.3
+      axios: 1.6.8
+      chalk: 3.0.0
+      fs-extra: 9.1.0
+      isomorphic-ws: 5.0.0(ws@8.5.0)
+      koa: 2.11.0
+      lodash.clonedeepwith: 4.5.0
+      log4js: 6.9.1
+      node-schedule: 2.1.1
+      rambda: 9.2.0
+      typescript: 5.4.5
+      vue-tsc: 1.8.27(typescript@5.4.5)
+      ws: 8.5.0
+    transitivePeerDependencies:
+      - bufferutil
+      - debug
+      - supports-color
+      - utf-8-validate
+
   '@module-federation/dts-plugin@0.1.12(typescript@5.4.5)(vue-tsc@1.8.27(typescript@5.4.5))':
     dependencies:
       '@module-federation/managers': 0.1.12
@@ -5353,6 +5668,44 @@ snapshots:
       - supports-color
       - utf-8-validate
 
+  '@module-federation/enhanced@0.1.11(typescript@4.4.2)(vue-tsc@1.8.27(typescript@4.4.2))(webpack@5.76.1(webpack-cli@5.0.1))':
+    dependencies:
+      '@module-federation/dts-plugin': 0.1.11(typescript@4.4.2)(vue-tsc@1.8.27(typescript@4.4.2))
+      '@module-federation/managers': 0.1.11
+      '@module-federation/manifest': 0.1.11(typescript@4.4.2)(vue-tsc@1.8.27(typescript@4.4.2))
+      '@module-federation/rspack': 0.1.11(typescript@4.4.2)(vue-tsc@1.8.27(typescript@4.4.2))
+      '@module-federation/runtime-tools': 0.1.11
+      '@module-federation/sdk': 0.1.11
+      upath: 2.0.1
+    optionalDependencies:
+      webpack: 5.76.1(webpack-cli@5.0.1)
+    transitivePeerDependencies:
+      - bufferutil
+      - debug
+      - supports-color
+      - typescript
+      - utf-8-validate
+      - vue-tsc
+
+  '@module-federation/enhanced@0.1.11(typescript@5.4.5)(vue-tsc@1.8.27(typescript@5.4.5))(webpack@5.76.1(webpack-cli@5.0.1))':
+    dependencies:
+      '@module-federation/dts-plugin': 0.1.11(typescript@5.4.5)(vue-tsc@1.8.27(typescript@5.4.5))
+      '@module-federation/managers': 0.1.11
+      '@module-federation/manifest': 0.1.11(typescript@5.4.5)(vue-tsc@1.8.27(typescript@5.4.5))
+      '@module-federation/rspack': 0.1.11(typescript@5.4.5)(vue-tsc@1.8.27(typescript@5.4.5))
+      '@module-federation/runtime-tools': 0.1.11
+      '@module-federation/sdk': 0.1.11
+      upath: 2.0.1
+    optionalDependencies:
+      webpack: 5.76.1(webpack-cli@5.0.1)
+    transitivePeerDependencies:
+      - bufferutil
+      - debug
+      - supports-color
+      - typescript
+      - utf-8-validate
+      - vue-tsc
+
   '@module-federation/enhanced@0.1.12(typescript@5.4.5)(vue-tsc@1.8.27(typescript@5.4.5))(webpack@5.76.1(webpack-cli@5.0.1))':
     dependencies:
       '@module-federation/dts-plugin': 0.1.12(typescript@5.4.5)(vue-tsc@1.8.27(typescript@5.4.5))
@@ -5372,11 +5725,47 @@ snapshots:
       - utf-8-validate
       - vue-tsc
 
+  '@module-federation/managers@0.1.11':
+    dependencies:
+      '@module-federation/sdk': 0.1.11
+      find-pkg: 2.0.0
+      fs-extra: 9.1.0
+
   '@module-federation/managers@0.1.12':
     dependencies:
       '@module-federation/sdk': 0.1.12
       find-pkg: 2.0.0
       fs-extra: 9.1.0
+
+  '@module-federation/manifest@0.1.11(typescript@4.4.2)(vue-tsc@1.8.27(typescript@4.4.2))':
+    dependencies:
+      '@module-federation/dts-plugin': 0.1.11(typescript@4.4.2)(vue-tsc@1.8.27(typescript@4.4.2))
+      '@module-federation/managers': 0.1.11
+      '@module-federation/sdk': 0.1.11
+      chalk: 3.0.0
+      find-pkg: 2.0.0
+    transitivePeerDependencies:
+      - bufferutil
+      - debug
+      - supports-color
+      - typescript
+      - utf-8-validate
+      - vue-tsc
+
+  '@module-federation/manifest@0.1.11(typescript@5.4.5)(vue-tsc@1.8.27(typescript@5.4.5))':
+    dependencies:
+      '@module-federation/dts-plugin': 0.1.11(typescript@5.4.5)(vue-tsc@1.8.27(typescript@5.4.5))
+      '@module-federation/managers': 0.1.11
+      '@module-federation/sdk': 0.1.11
+      chalk: 3.0.0
+      find-pkg: 2.0.0
+    transitivePeerDependencies:
+      - bufferutil
+      - debug
+      - supports-color
+      - typescript
+      - utf-8-validate
+      - vue-tsc
 
   '@module-federation/manifest@0.1.12(typescript@5.4.5)(vue-tsc@1.8.27(typescript@5.4.5))':
     dependencies:
@@ -5385,6 +5774,36 @@ snapshots:
       '@module-federation/sdk': 0.1.12
       chalk: 3.0.0
       find-pkg: 2.0.0
+    transitivePeerDependencies:
+      - bufferutil
+      - debug
+      - supports-color
+      - typescript
+      - utf-8-validate
+      - vue-tsc
+
+  '@module-federation/rspack@0.1.11(typescript@4.4.2)(vue-tsc@1.8.27(typescript@4.4.2))':
+    dependencies:
+      '@module-federation/dts-plugin': 0.1.11(typescript@4.4.2)(vue-tsc@1.8.27(typescript@4.4.2))
+      '@module-federation/managers': 0.1.11
+      '@module-federation/manifest': 0.1.11(typescript@4.4.2)(vue-tsc@1.8.27(typescript@4.4.2))
+      '@module-federation/runtime-tools': 0.1.11
+      '@module-federation/sdk': 0.1.11
+    transitivePeerDependencies:
+      - bufferutil
+      - debug
+      - supports-color
+      - typescript
+      - utf-8-validate
+      - vue-tsc
+
+  '@module-federation/rspack@0.1.11(typescript@5.4.5)(vue-tsc@1.8.27(typescript@5.4.5))':
+    dependencies:
+      '@module-federation/dts-plugin': 0.1.11(typescript@5.4.5)(vue-tsc@1.8.27(typescript@5.4.5))
+      '@module-federation/managers': 0.1.11
+      '@module-federation/manifest': 0.1.11(typescript@5.4.5)(vue-tsc@1.8.27(typescript@5.4.5))
+      '@module-federation/runtime-tools': 0.1.11
+      '@module-federation/sdk': 0.1.11
     transitivePeerDependencies:
       - bufferutil
       - debug
@@ -5408,6 +5827,11 @@ snapshots:
       - utf-8-validate
       - vue-tsc
 
+  '@module-federation/runtime-tools@0.1.11':
+    dependencies:
+      '@module-federation/runtime': 0.1.11
+      '@module-federation/webpack-bundler-runtime': 0.1.11
+
   '@module-federation/runtime-tools@0.1.12':
     dependencies:
       '@module-federation/runtime': 0.1.12
@@ -5417,6 +5841,10 @@ snapshots:
     dependencies:
       '@module-federation/runtime': 0.1.6
       '@module-federation/webpack-bundler-runtime': 0.1.6
+
+  '@module-federation/runtime@0.1.11':
+    dependencies:
+      '@module-federation/sdk': 0.1.11
 
   '@module-federation/runtime@0.1.12':
     dependencies:
@@ -5430,17 +5858,30 @@ snapshots:
     dependencies:
       '@module-federation/sdk': 0.1.6
 
+  '@module-federation/sdk@0.1.11': {}
+
   '@module-federation/sdk@0.1.12': {}
 
   '@module-federation/sdk@0.1.13': {}
 
   '@module-federation/sdk@0.1.6': {}
 
+  '@module-federation/third-party-dts-extractor@0.1.11':
+    dependencies:
+      find-pkg: 2.0.0
+      fs-extra: 9.1.0
+      resolve: 1.22.8
+
   '@module-federation/third-party-dts-extractor@0.1.12':
     dependencies:
       find-pkg: 2.0.0
       fs-extra: 9.1.0
       resolve: 1.22.8
+
+  '@module-federation/webpack-bundler-runtime@0.1.11':
+    dependencies:
+      '@module-federation/runtime': 0.1.11
+      '@module-federation/sdk': 0.1.11
 
   '@module-federation/webpack-bundler-runtime@0.1.12':
     dependencies:
@@ -5576,6 +6017,11 @@ snapshots:
       tslib: 2.6.2
 
   '@tanstack/query-core@5.32.1': {}
+
+  '@tanstack/react-query@5.32.1(react@18.1.0)':
+    dependencies:
+      '@tanstack/query-core': 5.32.1
+      react: 18.1.0
 
   '@tanstack/react-query@5.32.1(react@18.2.0)':
     dependencies:
@@ -5835,6 +6281,20 @@ snapshots:
     dependencies:
       '@vue/compiler-core': 3.4.27
       '@vue/shared': 3.4.27
+
+  '@vue/language-core@1.8.27(typescript@4.4.2)':
+    dependencies:
+      '@volar/language-core': 1.11.1
+      '@volar/source-map': 1.11.1
+      '@vue/compiler-dom': 3.4.27
+      '@vue/shared': 3.4.27
+      computeds: 0.0.1
+      minimatch: 9.0.4
+      muggle-string: 0.3.1
+      path-browserify: 1.0.1
+      vue-template-compiler: 2.7.16
+    optionalDependencies:
+      typescript: 4.4.2
 
   '@vue/language-core@1.8.27(typescript@5.4.5)':
     dependencies:
@@ -6401,6 +6861,15 @@ snapshots:
       object-assign: 4.1.1
       vary: 1.1.2
 
+  cosmiconfig@8.3.6(typescript@4.4.2):
+    dependencies:
+      import-fresh: 3.3.0
+      js-yaml: 4.1.0
+      parse-json: 5.2.0
+      path-type: 4.0.0
+    optionalDependencies:
+      typescript: 4.4.2
+
   cosmiconfig@8.3.6(typescript@5.4.5):
     dependencies:
       import-fresh: 3.3.0
@@ -6576,6 +7045,11 @@ snapshots:
   dotenv-defaults@2.0.2:
     dependencies:
       dotenv: 8.6.0
+
+  dotenv-webpack@7.1.0(webpack@5.76.1(webpack-cli@5.0.1)):
+    dependencies:
+      dotenv-defaults: 2.0.2
+      webpack: 5.76.1(webpack-cli@5.0.1)
 
   dotenv-webpack@8.1.0(webpack@5.76.1(webpack-cli@5.0.1)):
     dependencies:
@@ -7988,6 +8462,14 @@ snapshots:
       '@csstools/postcss-progressive-custom-properties': 2.3.0(postcss@8.4.38)
       postcss: 8.4.38
 
+  postcss-load-config@3.1.4(postcss@8.4.38)(ts-node@10.9.2(@types/node@15.14.9)(typescript@4.4.2)):
+    dependencies:
+      lilconfig: 2.1.0
+      yaml: 1.10.2
+    optionalDependencies:
+      postcss: 8.4.38
+      ts-node: 10.9.2(@types/node@15.14.9)(typescript@4.4.2)
+
   postcss-load-config@3.1.4(postcss@8.4.38)(ts-node@10.9.2(@types/node@18.19.31)(typescript@5.4.5)):
     dependencies:
       lilconfig: 2.1.0
@@ -7995,6 +8477,16 @@ snapshots:
     optionalDependencies:
       postcss: 8.4.38
       ts-node: 10.9.2(@types/node@18.19.31)(typescript@5.4.5)
+
+  postcss-loader@7.3.4(postcss@8.4.38)(typescript@4.4.2)(webpack@5.76.1(webpack-cli@5.0.1)):
+    dependencies:
+      cosmiconfig: 8.3.6(typescript@4.4.2)
+      jiti: 1.21.0
+      postcss: 8.4.38
+      semver: 7.6.0
+      webpack: 5.76.1(webpack-cli@5.0.1)
+    transitivePeerDependencies:
+      - typescript
 
   postcss-loader@7.3.4(postcss@8.4.38)(typescript@5.4.5)(webpack@5.76.1(webpack-cli@5.0.1)):
     dependencies:
@@ -8275,6 +8767,11 @@ snapshots:
       react-side-effect: 2.1.2(react@18.2.0)
 
   react-is@16.13.1: {}
+
+  react-oidc-context@3.1.0(oidc-client-ts@3.0.1)(react@18.1.0):
+    dependencies:
+      oidc-client-ts: 3.0.1
+      react: 18.1.0
 
   react-oidc-context@3.1.0(oidc-client-ts@3.0.1)(react@18.2.0):
     dependencies:
@@ -8870,6 +9367,25 @@ snapshots:
       v8-compile-cache-lib: 3.0.1
       yn: 3.1.1
 
+  ts-node@10.9.2(@types/node@15.14.9)(typescript@4.4.2):
+    dependencies:
+      '@cspotcode/source-map-support': 0.8.1
+      '@tsconfig/node10': 1.0.11
+      '@tsconfig/node12': 1.0.11
+      '@tsconfig/node14': 1.0.3
+      '@tsconfig/node16': 1.0.4
+      '@types/node': 15.14.9
+      acorn: 8.11.3
+      acorn-walk: 8.3.2
+      arg: 4.1.3
+      create-require: 1.1.1
+      diff: 4.0.2
+      make-error: 1.3.6
+      typescript: 4.4.2
+      v8-compile-cache-lib: 3.0.1
+      yn: 3.1.1
+    optional: true
+
   ts-node@10.9.2(@types/node@18.19.31)(typescript@5.4.5):
     dependencies:
       '@cspotcode/source-map-support': 0.8.1
@@ -8921,6 +9437,29 @@ snapshots:
     dependencies:
       media-typer: 0.3.0
       mime-types: 2.1.35
+
+  typescript-plugin-css-modules@5.1.0(ts-node@10.9.2(@types/node@15.14.9)(typescript@4.4.2))(typescript@4.4.2):
+    dependencies:
+      '@types/postcss-modules-local-by-default': 4.0.2
+      '@types/postcss-modules-scope': 3.0.4
+      dotenv: 16.4.5
+      icss-utils: 5.1.0(postcss@8.4.38)
+      less: 4.2.0
+      lodash.camelcase: 4.3.0
+      postcss: 8.4.38
+      postcss-load-config: 3.1.4(postcss@8.4.38)(ts-node@10.9.2(@types/node@15.14.9)(typescript@4.4.2))
+      postcss-modules-extract-imports: 3.1.0(postcss@8.4.38)
+      postcss-modules-local-by-default: 4.0.5(postcss@8.4.38)
+      postcss-modules-scope: 3.2.0(postcss@8.4.38)
+      reserved-words: 0.1.2
+      sass: 1.76.0
+      source-map-js: 1.2.0
+      stylus: 0.62.0
+      tsconfig-paths: 4.2.0
+      typescript: 4.4.2
+    transitivePeerDependencies:
+      - supports-color
+      - ts-node
 
   typescript-plugin-css-modules@5.1.0(ts-node@10.9.2(@types/node@18.19.31)(typescript@5.4.5))(typescript@5.4.5):
     dependencies:
@@ -9000,6 +9539,13 @@ snapshots:
     dependencies:
       de-indent: 1.0.2
       he: 1.2.0
+
+  vue-tsc@1.8.27(typescript@4.4.2):
+    dependencies:
+      '@volar/typescript': 1.11.1
+      '@vue/language-core': 1.8.27(typescript@4.4.2)
+      semver: 7.6.0
+      typescript: 4.4.2
 
   vue-tsc@1.8.27(typescript@5.4.5):
     dependencies:

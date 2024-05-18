@@ -1,5 +1,3 @@
-// @ts-check
-
 const { withBaseRSPack } = require("../../.rspack/config");
 
 const config = withBaseRSPack(
@@ -15,4 +13,5 @@ const config = withBaseRSPack(
 	},
 	true
 );
+
 module.exports = config;

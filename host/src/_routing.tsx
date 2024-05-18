@@ -7,6 +7,7 @@ import Profile from "./pages/profile";
 import Example from "./pages/example";
 import Health from "./pages/health";
 import NotFound from "./pages/404";
+import { HandleAuthRoute } from "@dream.mf/oidc";
 
 const Routing = () => (
   <Routes>
@@ -16,6 +17,8 @@ const Routing = () => (
     <Route path="/profile" element={<Profile />} />
     <Route path="/health" element={<Health />} />
     <Route path="/example" element={<Example />} />
+    {/* Auth */}
+    <Route path="/auth" element={<HandleAuthRoute />} />
     {/* ELSE */}
     <Route path="*" element={<NotFound />} />
   </Routes>
