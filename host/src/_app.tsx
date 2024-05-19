@@ -36,12 +36,14 @@ const HostRouter = () => {
 	}, [])
 
   return (
-    <DreamMFAuthProvider config={authConfig()}>
+    <>
       <DreamMFLogListener config={config()} />
-      <BrowserRouter>
-        <Routing />
-      </BrowserRouter>
-    </DreamMFAuthProvider>
+      <DreamMFAuthProvider config={authConfig()}>
+        <BrowserRouter>
+          <Routing />
+        </BrowserRouter>
+      </DreamMFAuthProvider>
+    </>
   );
 };
 
