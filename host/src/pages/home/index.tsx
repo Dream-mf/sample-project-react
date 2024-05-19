@@ -1,6 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import { importRemote, ImportRemoteOptions } from '@dream.mf/utilities';
+import { importRemote } from '@dream.mf/utilities';
 import Layout from "../../layout";
 
 // @ts-ignore

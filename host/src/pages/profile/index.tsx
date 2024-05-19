@@ -2,6 +2,8 @@
 import React, { Suspense } from "react";
 import PageLoader from "../../components/page-loader";
 import { importRemote } from '@dream.mf/utilities';
+import Layout from "../../layout";
+import { DreamMFContextGuard } from "@dream.mf/oidc";
 
 // @ts-ignore
 const ProfileRemote = React.lazy(() =>
@@ -15,9 +17,11 @@ const ProfileRemote = React.lazy(() =>
 
 const ProfilePage = () => {
     return (
-        <Suspense fallback={<PageLoader />}>
-            <ProfileRemote />
-        </Suspense>
+        <Layout>
+            <DreamMFContextGuard fallback={<>Loading...</>}>
+                <ProfileRemote />
+            </DreamMFContextGuard>
+        </Layout>
     );
 }
 

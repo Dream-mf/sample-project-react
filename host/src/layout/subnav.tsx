@@ -7,9 +7,6 @@ export default function Page() {
                 <NavLink className="nav-link" to="/">Root</NavLink>
             </li>
             <li className="nav-item" role="presentation">
-                <NavLink className="nav-link" to="/health">Health</NavLink>
-            </li>
-            <li className="nav-item" role="presentation">
                 <NavLink className="nav-link" to="/sample/123456">Sample</NavLink>
             </li>
             <li className="nav-item" role="presentation">
@@ -22,7 +19,10 @@ export default function Page() {
                 <NavLink className="nav-link" to="/notfound">404</NavLink>
             </li>
             <li className="nav-item" role="presentation">
-                <NavLink className="nav-link" to="/profile">Profile</NavLink>
+                <NavLink className="nav-link" to="/profile">Profile (Auth)</NavLink>
+            </li>
+            <li className="nav-item" role="presentation">
+                <NavLink className="nav-link" to="/logout">Logout</NavLink>
             </li>
         </ul>
     )

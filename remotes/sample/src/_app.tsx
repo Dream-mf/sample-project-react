@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react';
 import { Helmet } from "react-helmet";
-import { LogClient } from '@shared/logging';
+import { DreamMFLogClient } from '@dream.mf/logging';
 
 const Sample = ({ id }) => {
   
   useEffect(() => {
-    LogClient.logPageView({ page: 'Sample' });
+    DreamMFLogClient.logPageView({ page: 'Sample' });
   }, []);
 
   return (

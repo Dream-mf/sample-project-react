@@ -1,6 +1,12 @@
 import React from 'react';
 
-const RemoteHealthComponent = ({ name, version, dependencies }) => {
+interface ReactHealthProps {
+    name: string;
+    version: string;
+    dependencies: any;
+}
+
+export const RemoteHealthComponent = ({ name, version, dependencies }: ReactHealthProps) => {
     const formatDependencies = () => {
         let collection = [];
         for (const [key, value] of Object.entries(dependencies)) {
@@ -22,5 +28,3 @@ const RemoteHealthComponent = ({ name, version, dependencies }) => {
         </div>
     )
 }
-
-export default RemoteHealthComponent;
