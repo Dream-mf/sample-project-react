@@ -1,3 +1,4 @@
+import { DreamMFContextGuard } from "@dream.mf/oidc";
 import { NavLink } from "react-router-dom";
 
 export default function Page() {
@@ -21,9 +22,11 @@ export default function Page() {
             <li className="nav-item" role="presentation">
                 <NavLink className="nav-link" to="/profile">Profile (Auth)</NavLink>
             </li>
-            <li className="nav-item" role="presentation">
-                <NavLink className="nav-link" to="/logout">Logout</NavLink>
-            </li>
+            <DreamMFContextGuard fallback={<></>}>
+                <li className="nav-item" role="presentation">
+                    <NavLink className="nav-link" to="/logout">Logout</NavLink>
+                </li>
+            </DreamMFContextGuard>
         </ul>
     )
 }
