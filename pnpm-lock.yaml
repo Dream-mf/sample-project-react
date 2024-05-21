@@ -45,14 +45,14 @@ importers:
         specifier: 0.0.10
         version: 0.0.10(@swc/helpers@0.5.11)(@types/eslint@8.56.10)(@types/express@4.17.21)(browserslist@4.23.0)(prettier@3.2.5)(react-refresh@0.14.2)(ts-node@10.9.2(@types/node@15.14.9)(typescript@4.4.2))(typescript@4.4.2)(vue-tsc@1.8.27(typescript@4.4.2))
       '@dream.mf/core':
-        specifier: 1.2.3
-        version: 1.2.3
+        specifier: 1.2.4
+        version: 1.2.4
       '@dream.mf/logging':
         specifier: 1.2.3
         version: 1.2.3
       '@dream.mf/oidc':
-        specifier: 0.9.3
-        version: 0.9.3(typescript@4.4.2)(vue-tsc@1.8.27(typescript@4.4.2))(webpack@5.76.1(webpack-cli@5.0.1))
+        specifier: 0.9.6
+        version: 0.9.6(typescript@4.4.2)(vue-tsc@1.8.27(typescript@4.4.2))(webpack@5.76.1(webpack-cli@5.0.1))
       '@dream.mf/utilities':
         specifier: 0.9.7
         version: 0.9.7
@@ -106,8 +106,8 @@ importers:
         specifier: 0.0.10
         version: 0.0.10(@swc/helpers@0.5.11)(@types/eslint@8.56.10)(@types/express@4.17.21)(browserslist@4.23.0)(prettier@3.2.5)(react-refresh@0.14.2)(ts-node@10.9.2(@types/node@15.14.9)(typescript@4.4.2))(typescript@4.4.2)(vue-tsc@1.8.27(typescript@4.4.2))
       '@dream.mf/core':
-        specifier: 1.2.3
-        version: 1.2.3
+        specifier: 1.2.4
+        version: 1.2.4
       '@dream.mf/logging':
         specifier: 1.2.3
         version: 1.2.3
@@ -158,14 +158,14 @@ importers:
         specifier: 0.0.10
         version: 0.0.10(@swc/helpers@0.5.11)(@types/eslint@8.56.10)(@types/express@4.17.21)(browserslist@4.23.0)(prettier@3.2.5)(react-refresh@0.14.2)(ts-node@10.9.2(@types/node@15.14.9)(typescript@4.4.2))(typescript@4.4.2)(vue-tsc@1.8.27(typescript@4.4.2))
       '@dream.mf/core':
-        specifier: 1.2.3
-        version: 1.2.3
+        specifier: 1.2.4
+        version: 1.2.4
       '@dream.mf/logging':
         specifier: 1.2.3
         version: 1.2.3
       '@dream.mf/oidc':
-        specifier: 0.9.3
-        version: 0.9.3(typescript@4.4.2)(vue-tsc@1.8.27(typescript@4.4.2))(webpack@5.76.1(webpack-cli@5.0.1))
+        specifier: 0.9.6
+        version: 0.9.6(typescript@4.4.2)(vue-tsc@1.8.27(typescript@4.4.2))(webpack@5.76.1(webpack-cli@5.0.1))
       react:
         specifier: 18.2.0
         version: 18.2.0
@@ -213,8 +213,8 @@ importers:
         specifier: 0.0.10
         version: 0.0.10(@swc/helpers@0.5.11)(@types/eslint@8.56.10)(@types/express@4.17.21)(browserslist@4.23.0)(prettier@3.2.5)(react-refresh@0.14.2)(ts-node@10.9.2(@types/node@15.14.9)(typescript@4.4.2))(typescript@4.4.2)(vue-tsc@1.8.27(typescript@4.4.2))
       '@dream.mf/core':
-        specifier: 1.2.3
-        version: 1.2.3
+        specifier: 1.2.4
+        version: 1.2.4
       '@dream.mf/logging':
         specifier: 1.2.3
         version: 1.2.3
@@ -565,8 +565,12 @@ packages:
     resolution: {integrity: sha512-Fp/lrzN4uvwz2YZHvn45wL/ijl30dDs2iGvn4NJ6/B1r2kIpdS3S8shIxS9H1HV9Smf1ck+NXjk7Ac8ACOE/GQ==}
     engines: {node: '>=16', npm: '>=8'}
 
-  '@dream.mf/core@1.2.3':
-    resolution: {integrity: sha512-3cRE6p4tuOX4J363P+7FtFV9vhT3FkjKi4xgCDOvoY7HyleW9pK4iIT/uY+Olz8nHW7km/dr2ey4TZsbUkmnGA==}
+  '@dream.mf/core@1.2.4':
+    resolution: {integrity: sha512-RtEBfTWSgb3E9pESwmZ0zmka4qT05yVUDABe/9lkJtXHWu/BYzTNGK4r0X6HAa324M5z/LTJ/pnVAeMwqx1i8A==}
+    engines: {node: '>=16', npm: '>=8'}
+
+  '@dream.mf/core@1.2.7':
+    resolution: {integrity: sha512-+Y/6kLPzTYTFjhQfbRPZAZSKboMkQuRyZTt0vBTfPeEDxOs74ygYYy1HZWjn4nNLDbQEtucR4S3yrE0qP/UZUA==}
     engines: {node: '>=16', npm: '>=8'}
 
   '@dream.mf/logging@1.0.2':
@@ -581,8 +585,8 @@ packages:
     resolution: {integrity: sha512-GJeU0MZFPFcfj+jJqeA6Pl0LDhu1/kZTgkwJ48BTct1mJwKhtgN15530DxTj9xcyJUx6IGjE8kBMSFcAxgPpzA==}
     engines: {node: '>=16', npm: '>=8', pnpm: '>=9'}
 
-  '@dream.mf/oidc@0.9.3':
-    resolution: {integrity: sha512-L6jiSITTl2Koky+K63ZDJ0MJwr2IG9QgynwLqQyhXrAWkrhww7u2dkDZ16PS17JOuk7/t3UJk8pJxve7mlR0fA==}
+  '@dream.mf/oidc@0.9.6':
+    resolution: {integrity: sha512-slEepooJm8xd+q8fHKW7m6f7E5CnN1c08UfNiXz3ajQzoU8TRVoZwFVDJM4FxccfSkZ0CHmQOMkflzU6LK2TtQ==}
     engines: {node: '>=16', npm: '>=8'}
 
   '@dream.mf/utilities@0.9.7':
@@ -4259,7 +4263,9 @@ snapshots:
 
   '@dream.mf/core@1.2.2': {}
 
-  '@dream.mf/core@1.2.3': {}
+  '@dream.mf/core@1.2.4': {}
+
+  '@dream.mf/core@1.2.7': {}
 
   '@dream.mf/logging@1.0.2':
     dependencies:
@@ -4279,9 +4285,9 @@ snapshots:
       react: 18.1.0
       react-dom: 18.1.0(react@18.1.0)
 
-  '@dream.mf/oidc@0.9.3(typescript@4.4.2)(vue-tsc@1.8.27(typescript@4.4.2))(webpack@5.76.1(webpack-cli@5.0.1))':
+  '@dream.mf/oidc@0.9.6(typescript@4.4.2)(vue-tsc@1.8.27(typescript@4.4.2))(webpack@5.76.1(webpack-cli@5.0.1))':
     dependencies:
-      '@dream.mf/core': 1.1.2
+      '@dream.mf/core': 1.2.7
       '@dream.mf/logging': 1.0.2
       '@module-federation/enhanced': 0.1.11(typescript@4.4.2)(vue-tsc@1.8.27(typescript@4.4.2))(webpack@5.76.1(webpack-cli@5.0.1))
       '@tanstack/query-core': 5.32.1

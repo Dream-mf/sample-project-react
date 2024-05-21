@@ -14,10 +14,10 @@
 		"react-router": "6.22.2",
 		"react-router-dom": "6.22.2",
 		"react-helmet": "^6.1.0",
-		"@dream.mf/core": "1.2.3",
+		"@dream.mf/core": "1.2.4",
 		"@dream.mf/logging": "1.2.3",
 		"@dream.mf/bundlers": "0.0.10",
-		"@dream.mf/oidc": "0.9.3"
+		"@dream.mf/oidc": "0.9.6"
 	},
 	"devDependencies": {
 		"@types/node": "^15.0.3",
