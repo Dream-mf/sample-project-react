@@ -2,5 +2,5 @@
 **/dist
 **/build
 .DS_Store
-**/.dev-server.zip
-**/@mf-types.zip
+.dev-server.zip
+@mf-types.zip
