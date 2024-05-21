@@ -5,7 +5,7 @@ import { importRemote } from '@dream.mf/utilities';
 import Layout from "../../layout";
 import { DreamMFContextGuard } from "@dream.mf/oidc";
 
-// @ts-ignore
+
 const ProfileRemote = React.lazy(() =>
     importRemote({
         remoteUrl: 'http://localhost:3003/remote.js',
@@ -15,11 +15,22 @@ const ProfileRemote = React.lazy(() =>
     })
 );
 
+const ProfileHealthRemote = React.lazy(() =>
+    importRemote({
+        remoteUrl: 'http://localhost:3003/remote.js',
+        scope: 'remote_profile',
+        module: 'Health',
+        remoteUrlFallback: null
+    })
+);
+
 const ProfilePage = () => {
     return (
         <Layout>
             <DreamMFContextGuard fallback={<>Loading...</>}>
                 <ProfileRemote />
+                <h5>Package Details</h5>
+                <ProfileHealthRemote />
             </DreamMFContextGuard>
         </Layout>
     );

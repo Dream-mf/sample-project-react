@@ -95,10 +95,7 @@ importers:
         version: 5.76.1(webpack-cli@5.0.1)
       webpack-cli:
         specifier: 5.0.1
-        version: 5.0.1(webpack-dev-server@4.12.0)(webpack@5.76.1)
-      webpack-dev-server:
-        specifier: 4.12.0
-        version: 4.12.0(webpack-cli@5.0.1)(webpack@5.76.1)
+        version: 5.0.1(webpack@5.76.1)
 
   remotes/home:
     dependencies:
@@ -136,21 +133,9 @@ importers:
       '@types/react-dom':
         specifier: ^18.2.19
         version: 18.3.0
-      serve:
-        specifier: 11.3.2
-        version: 11.3.2
       typescript:
         specifier: 4.4.2
         version: 4.4.2
-      webpack:
-        specifier: 5.76.1
-        version: 5.76.1(webpack-cli@5.0.1)
-      webpack-cli:
-        specifier: 5.0.1
-        version: 5.0.1(webpack-dev-server@4.12.0)(webpack@5.76.1)
-      webpack-dev-server:
-        specifier: 4.12.0
-        version: 4.12.0(webpack-cli@5.0.1)(webpack@5.76.1)
 
   remotes/profile:
     dependencies:
@@ -191,21 +176,9 @@ importers:
       '@types/react-dom':
         specifier: ^18.2.19
         version: 18.3.0
-      serve:
-        specifier: 11.3.2
-        version: 11.3.2
       typescript:
         specifier: 4.4.2
         version: 4.4.2
-      webpack:
-        specifier: 5.76.1
-        version: 5.76.1(webpack-cli@5.0.1)
-      webpack-cli:
-        specifier: 5.0.1
-        version: 5.0.1(webpack-dev-server@4.12.0)(webpack@5.76.1)
-      webpack-dev-server:
-        specifier: 4.12.0
-        version: 4.12.0(webpack-cli@5.0.1)(webpack@5.76.1)
 
   remotes/sample:
     dependencies:
@@ -243,21 +216,9 @@ importers:
       '@types/react-dom':
         specifier: ^18.2.19
         version: 18.3.0
-      serve:
-        specifier: 11.3.2
-        version: 11.3.2
       typescript:
         specifier: 4.4.2
         version: 4.4.2
-      webpack:
-        specifier: 5.76.1
-        version: 5.76.1(webpack-cli@5.0.1)
-      webpack-cli:
-        specifier: 5.0.1
-        version: 5.0.1(webpack-dev-server@4.12.0)(webpack@5.76.1)
-      webpack-dev-server:
-        specifier: 4.12.0
-        version: 4.12.0(webpack-cli@5.0.1)(webpack@5.76.1)
 
 packages:
 
@@ -5080,10 +5041,20 @@ snapshots:
       webpack: 5.76.1(webpack-cli@5.0.1)
       webpack-cli: 5.0.1(webpack-dev-server@4.12.0)(webpack@5.76.1)
 
+  '@webpack-cli/configtest@2.1.1(webpack-cli@5.0.1(webpack@5.76.1))(webpack@5.76.1(webpack-cli@5.0.1))':
+    dependencies:
+      webpack: 5.76.1(webpack-cli@5.0.1)
+      webpack-cli: 5.0.1(webpack@5.76.1)
+
   '@webpack-cli/info@2.0.2(webpack-cli@5.0.1(webpack-dev-server@4.12.0)(webpack@5.76.1))(webpack@5.76.1(webpack-cli@5.0.1))':
     dependencies:
       webpack: 5.76.1(webpack-cli@5.0.1)
       webpack-cli: 5.0.1(webpack-dev-server@4.12.0)(webpack@5.76.1)
+
+  '@webpack-cli/info@2.0.2(webpack-cli@5.0.1(webpack@5.76.1))(webpack@5.76.1(webpack-cli@5.0.1))':
+    dependencies:
+      webpack: 5.76.1(webpack-cli@5.0.1)
+      webpack-cli: 5.0.1(webpack@5.76.1)
 
   '@webpack-cli/serve@2.0.5(webpack-cli@5.0.1(webpack-dev-server@4.12.0)(webpack@5.76.1))(webpack-dev-server@4.12.0(webpack-cli@5.0.1)(webpack@5.76.1))(webpack@5.76.1(webpack-cli@5.0.1))':
     dependencies:
@@ -5091,6 +5062,11 @@ snapshots:
       webpack-cli: 5.0.1(webpack-dev-server@4.12.0)(webpack@5.76.1)
     optionalDependencies:
       webpack-dev-server: 4.12.0(webpack-cli@5.0.1)(webpack@5.76.1)
+
+  '@webpack-cli/serve@2.0.5(webpack-cli@5.0.1(webpack@5.76.1))(webpack@5.76.1(webpack-cli@5.0.1))':
+    dependencies:
+      webpack: 5.76.1(webpack-cli@5.0.1)
+      webpack-cli: 5.0.1(webpack@5.76.1)
 
   '@xtuc/ieee754@1.2.0': {}
 
@@ -7780,6 +7756,23 @@ snapshots:
     optionalDependencies:
       webpack-dev-server: 4.12.0(webpack-cli@5.0.1)(webpack@5.76.1)
 
+  webpack-cli@5.0.1(webpack@5.76.1):
+    dependencies:
+      '@discoveryjs/json-ext': 0.5.7
+      '@webpack-cli/configtest': 2.1.1(webpack-cli@5.0.1(webpack@5.76.1))(webpack@5.76.1(webpack-cli@5.0.1))
+      '@webpack-cli/info': 2.0.2(webpack-cli@5.0.1(webpack@5.76.1))(webpack@5.76.1(webpack-cli@5.0.1))
+      '@webpack-cli/serve': 2.0.5(webpack-cli@5.0.1(webpack@5.76.1))(webpack@5.76.1(webpack-cli@5.0.1))
+      colorette: 2.0.20
+      commander: 9.5.0
+      cross-spawn: 7.0.3
+      envinfo: 7.13.0
+      fastest-levenshtein: 1.0.16
+      import-local: 3.1.0
+      interpret: 3.1.1
+      rechoir: 0.8.0
+      webpack: 5.76.1(webpack-cli@5.0.1)
+      webpack-merge: 5.10.0
+
   webpack-dev-middleware@5.3.4(webpack@5.76.1(webpack-cli@5.0.1)):
     dependencies:
       colorette: 2.0.20
@@ -8011,7 +8004,7 @@ snapshots:
       watchpack: 2.4.1
       webpack-sources: 3.2.3
     optionalDependencies:
-      webpack-cli: 5.0.1(webpack-dev-server@4.12.0)(webpack@5.76.1)
+      webpack-cli: 5.0.1(webpack@5.76.1)
     transitivePeerDependencies:
       - '@swc/core'
       - esbuild
