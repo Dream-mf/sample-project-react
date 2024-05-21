@@ -15,7 +15,6 @@
 		"react-dom": "18.2.0",
 		"react-router": "6.22.2",
 		"react-router-dom": "6.22.2",
-		"react-oidc-context": "^3.0.0",
 		"@dream.mf/core": "1.2.3",
 		"@dream.mf/logging": "1.2.3",
 		"@dream.mf/utilities": "0.9.7",
