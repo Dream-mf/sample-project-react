@@ -1,4 +1,5 @@
 import { Routes, Route } from "react-router";
+import { useNavigate } from "react-router-dom";
 import { HandleAuthRoute } from "@dream.mf/oidc";
 
 import Index from "./pages";
@@ -9,19 +10,22 @@ import Example from "./pages/example";
 import NotFound from "./pages/404";
 import Logout from "./pages/logout";
 
-const Routing = () => (
-  <Routes>
-    <Route path="/" element={<Index />} />
-    <Route path="/sample/:id" element={<Sample />} />
-    <Route path="/home" element={<Home />} />
-    <Route path="/profile" element={<Profile />} />
-    <Route path="/example" element={<Example />} />
-    {/* Auth */}
-    <Route path="/auth" element={<HandleAuthRoute />} />
-    <Route path="/logout" element={<Logout />} />
-    {/* ELSE */}
-    <Route path="*" element={<NotFound />} />
-  </Routes>
-);
+const Routing = () => {
+  const navigate = useNavigate();
+  return (
+    <Routes>
+      <Route path="/" element={<Index />} />
+      <Route path="/sample/:id" element={<Sample />} />
+      <Route path="/home" element={<Home />} />
+      <Route path="/profile" element={<Profile />} />
+      <Route path="/example" element={<Example />} />
+      {/* Auth */}
+      <Route path="/auth" element={<HandleAuthRoute navigate={navigate} />} />
+      <Route path="/logout" element={<Logout />} />
+      {/* ELSE */}
+      <Route path="*" element={<NotFound />} />
+    </Routes>
+  );
+}
 
 export default Routing;

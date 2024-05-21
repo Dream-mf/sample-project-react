@@ -51,8 +51,8 @@ importers:
         specifier: 1.2.3
         version: 1.2.3
       '@dream.mf/oidc':
-        specifier: 0.9.6
-        version: 0.9.6(typescript@4.4.2)(vue-tsc@1.8.27(typescript@4.4.2))(webpack@5.76.1(webpack-cli@5.0.1))
+        specifier: 0.10.1
+        version: 0.10.1(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       '@dream.mf/utilities':
         specifier: 0.9.7
         version: 0.9.7
@@ -149,8 +149,8 @@ importers:
         specifier: 1.2.3
         version: 1.2.3
       '@dream.mf/oidc':
-        specifier: 0.9.6
-        version: 0.9.6(typescript@4.4.2)(vue-tsc@1.8.27(typescript@4.4.2))(webpack@5.76.1(webpack-cli@5.0.1))
+        specifier: 0.10.1
+        version: 0.10.1(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       react:
         specifier: 18.2.0
         version: 18.2.0
@@ -534,10 +534,6 @@ packages:
     resolution: {integrity: sha512-+Y/6kLPzTYTFjhQfbRPZAZSKboMkQuRyZTt0vBTfPeEDxOs74ygYYy1HZWjn4nNLDbQEtucR4S3yrE0qP/UZUA==}
     engines: {node: '>=16', npm: '>=8'}
 
-  '@dream.mf/logging@1.0.2':
-    resolution: {integrity: sha512-aIMPeDBmhm6i2QVz2OknKjJhy/uXXhEC83EkBpfE6hJnjvMyjq5yMjAYsTM1/vd9J8SpddLIwFDSxzZne8YJsg==}
-    engines: {node: '>=16', npm: '>=8'}
-
   '@dream.mf/logging@1.1.2':
     resolution: {integrity: sha512-dP5SMo4wtYOoNDf6xabkVA16GFUzvcdQLtC135f6iAU84YKzQ+hOEnEIEhZyQiVHM5YBz19ewrV1ZrBqUB+grQ==}
     engines: {node: '>=16', npm: '>=8'}
@@ -546,9 +542,12 @@ packages:
     resolution: {integrity: sha512-GJeU0MZFPFcfj+jJqeA6Pl0LDhu1/kZTgkwJ48BTct1mJwKhtgN15530DxTj9xcyJUx6IGjE8kBMSFcAxgPpzA==}
     engines: {node: '>=16', npm: '>=8', pnpm: '>=9'}
 
-  '@dream.mf/oidc@0.9.6':
-    resolution: {integrity: sha512-slEepooJm8xd+q8fHKW7m6f7E5CnN1c08UfNiXz3ajQzoU8TRVoZwFVDJM4FxccfSkZ0CHmQOMkflzU6LK2TtQ==}
+  '@dream.mf/oidc@0.10.1':
+    resolution: {integrity: sha512-iZW+lkYulB9b3b0aQqDlZFVc40RiDghuPhFn4CEBnzqNam7cerRQGKo2KbVBjYEvXovSMSVUs35K3NZ35rAQmQ==}
     engines: {node: '>=16', npm: '>=8'}
+    peerDependencies:
+      react: ^18.1.0
+      react-dom: ^18.1.0
 
   '@dream.mf/utilities@0.9.7':
     resolution: {integrity: sha512-C4rOZoWxQsjhbu+e6HhToIBBS2pO78Lr1plQVc55CLPNwC8I8U12CLxocDvdyO8JB/lLWY9x3LrmL2y0bn9wvA==}
@@ -905,14 +904,6 @@ packages:
 
   '@swc/helpers@0.5.11':
     resolution: {integrity: sha512-YNlnKRWF2sVojTpIyzwou9XoTNbzbzONwRhOoniEioF1AtaitTvVZblaQRrAzChWQ1bLYyYSWzM18y4WwgzJ+A==}
-
-  '@tanstack/query-core@5.32.1':
-    resolution: {integrity: sha512-mCWa1wdGb1jiny4+qYegbSeadcFj+Nq65KFSs4A1DRveoIq7SrTwUhqu7hrB6d54cQH5x59DfJvxusn3w1Cj/g==}
-
-  '@tanstack/react-query@5.32.1':
-    resolution: {integrity: sha512-+nXLMB0JK0XwTJ+lQt49DPNLrbSppni9N5W5yMR085yW3YaRKRUFhfVTER3TvQd1UycHpoGPFnt1gHiijXERAg==}
-    peerDependencies:
-      react: ^18.0.0
 
   '@tsconfig/node10@1.0.11':
     resolution: {integrity: sha512-DcRjDCujK/kCk/cUe8Xz8ZSpm8mS3mNNpta+jGCA6USEDfktlNvm1+IuZ9eTcDbNk41BHwpHHeW+N1lKCz4zOw==}
@@ -3679,10 +3670,6 @@ packages:
     resolution: {integrity: sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg==}
     hasBin: true
 
-  uuid@9.0.1:
-    resolution: {integrity: sha512-b+1eJOlsR9K8HJpow9Ok3fiWOWSIcIzXodvv0rQjVoOVNpWMpxf1wZNpt4y9h10odCNrqnYp1OBzRktckBe3sA==}
-    hasBin: true
-
   v8-compile-cache-lib@3.0.1:
     resolution: {integrity: sha512-wa7YjyUGfNZngI/vtK0UHAN+lgDCxBPCylVXGp0zu59Fz5aiGtNXaq3DhIov063MorB+VfufLh3JlF2KdTK3xg==}
 
@@ -4228,12 +4215,6 @@ snapshots:
 
   '@dream.mf/core@1.2.7': {}
 
-  '@dream.mf/logging@1.0.2':
-    dependencies:
-      '@dream.mf/core': 1.1.2
-      react: 18.1.0
-      react-dom: 18.1.0(react@18.1.0)
-
   '@dream.mf/logging@1.1.2':
     dependencies:
       '@dream.mf/core': 1.1.2
@@ -4246,29 +4227,15 @@ snapshots:
       react: 18.1.0
       react-dom: 18.1.0(react@18.1.0)
 
-  '@dream.mf/oidc@0.9.6(typescript@4.4.2)(vue-tsc@1.8.27(typescript@4.4.2))(webpack@5.76.1(webpack-cli@5.0.1))':
+  '@dream.mf/oidc@0.10.1(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
     dependencies:
       '@dream.mf/core': 1.2.7
-      '@dream.mf/logging': 1.0.2
-      '@module-federation/enhanced': 0.1.11(typescript@4.4.2)(vue-tsc@1.8.27(typescript@4.4.2))(webpack@5.76.1(webpack-cli@5.0.1))
-      '@tanstack/query-core': 5.32.1
-      '@tanstack/react-query': 5.32.1(react@18.1.0)
+      '@dream.mf/logging': 1.2.3
       oidc-client: 1.11.5
       oidc-client-ts: 3.0.1
-      react: 18.1.0
-      react-dom: 18.1.0(react@18.1.0)
-      react-oidc-context: 3.1.0(oidc-client-ts@3.0.1)(react@18.1.0)
-      react-router: 6.22.2(react@18.1.0)
-      react-router-dom: 6.22.2(react-dom@18.1.0(react@18.1.0))(react@18.1.0)
-      uuid: 9.0.1
-    transitivePeerDependencies:
-      - bufferutil
-      - debug
-      - supports-color
-      - typescript
-      - utf-8-validate
-      - vue-tsc
-      - webpack
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+      react-oidc-context: 3.1.0(oidc-client-ts@3.0.1)(react@18.2.0)
 
   '@dream.mf/utilities@0.9.7':
     dependencies:
@@ -4696,13 +4663,6 @@ snapshots:
     dependencies:
       tslib: 2.6.2
     optional: true
-
-  '@tanstack/query-core@5.32.1': {}
-
-  '@tanstack/react-query@5.32.1(react@18.1.0)':
-    dependencies:
-      '@tanstack/query-core': 5.32.1
-      react: 18.1.0
 
   '@tsconfig/node10@1.0.11':
     optional: true
@@ -7100,10 +7060,10 @@ snapshots:
 
   react-is@16.13.1: {}
 
-  react-oidc-context@3.1.0(oidc-client-ts@3.0.1)(react@18.1.0):
+  react-oidc-context@3.1.0(oidc-client-ts@3.0.1)(react@18.2.0):
     dependencies:
       oidc-client-ts: 3.0.1
-      react: 18.1.0
+      react: 18.2.0
 
   react-refresh@0.14.2:
     optional: true
@@ -7693,8 +7653,6 @@ snapshots:
   utils-merge@1.0.1: {}
 
   uuid@8.3.2: {}
-
-  uuid@9.0.1: {}
 
   v8-compile-cache-lib@3.0.1:
     optional: true
