@@ -1,5 +1,4 @@
 import React from "react";
-import { useParams } from "react-router-dom";
 import { importRemote } from '@dream.mf/utilities';
 import Layout from "../../layout";
 
@@ -14,8 +13,7 @@ const HomeRemote = React.lazy(() =>
 );
 
 const HomePage = () => {
-    let { id } = useParams();
-    return (<Layout><HomeRemote id={id} /></Layout>);
+    return (<Layout><HomeRemote /></Layout>);
 }
 
 export default HomePage;
