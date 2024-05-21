@@ -16,7 +16,7 @@
 		"react-helmet": "^6.1.0",
 		"@dream.mf/core": "1.2.3",
 		"@dream.mf/logging": "1.2.3",
-		"@dream.mf/bundlers": "0.0.9",
+		"@dream.mf/bundlers": "0.0.10",
 		"@dream.mf/oidc": "0.9.2"
 	},
 	"devDependencies": {
