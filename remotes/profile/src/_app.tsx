@@ -1,14 +1,14 @@
 import React, { useEffect } from "react";
 import { Helmet } from "react-helmet";
 import { DreamMFLogClient } from '@dream.mf/logging';
-import { useDreamAuth } from '@dream.mf/oidc';
+import { DreamMFRequestInit, useDreamAuth } from '@dream.mf/oidc';
 
 const App = () => {
   const { user, isAuthenticated } = useDreamAuth();
 
   useEffect(() => {
     DreamMFLogClient.logPageView({ page: "Profile" });
-    fetch("https://run.mocky.io/v3/d6c90610-c9d9-4de3-8dc8-c8d76384e5c4")
+    fetch("https://run.mocky.io/v3/d6c90610-c9d9-4de3-8dc8-c8d76384e5c4", { useAuthentication: true } as DreamMFRequestInit)
       .then((res) => res.json())
       .then((res) => {
         DreamMFLogClient.logFetch(res);
@@ -30,6 +30,7 @@ const App = () => {
           <ul>
             <li>Nickname: { user?.profile.nickname }</li>
             <li>Email: { user?.profile.email }</li>
+            <li>Id Token: { user?.id_token }</li>
           </ul>
           : <>User is not logged in</> }
       </div>
