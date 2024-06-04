@@ -8,7 +8,8 @@ const App = () => {
 
   useEffect(() => {
     DreamMFLogClient.logPageView({ page: "Profile" });
-    fetch("https://run.mocky.io/v3/d6c90610-c9d9-4de3-8dc8-c8d76384e5c4", { useAuthentication: true } as DreamMFRequestInit)
+    const options = { useAuthentication: true } as DreamMFRequestInit;
+    fetch("https://run.mocky.io/v3/d6c90610-c9d9-4de3-8dc8-c8d76384e5c4", options)
       .then((res) => res.json())
       .then((res) => {
         DreamMFLogClient.logFetch(res);
