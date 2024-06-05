@@ -51,8 +51,8 @@ importers:
         specifier: 1.2.3
         version: 1.2.3
       '@dream.mf/oidc':
-        specifier: 0.11.0
-        version: 0.11.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+        specifier: 0.12.1
+        version: 0.12.1(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       '@dream.mf/utilities':
         specifier: 0.9.7
         version: 0.9.7
@@ -149,8 +149,8 @@ importers:
         specifier: 1.2.3
         version: 1.2.3
       '@dream.mf/oidc':
-        specifier: 0.11.0
-        version: 0.11.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+        specifier: 0.12.1
+        version: 0.12.1(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       react:
         specifier: 18.2.0
         version: 18.2.0
@@ -542,8 +542,8 @@ packages:
     resolution: {integrity: sha512-GJeU0MZFPFcfj+jJqeA6Pl0LDhu1/kZTgkwJ48BTct1mJwKhtgN15530DxTj9xcyJUx6IGjE8kBMSFcAxgPpzA==}
     engines: {node: '>=16', npm: '>=8', pnpm: '>=9'}
 
-  '@dream.mf/oidc@0.11.0':
-    resolution: {integrity: sha512-8QwZnNMe/gCnpLkU4zBu5jjbysphZ4ZMTOnVFcLYER0ic1pdKAEHBHqIUALdzYTmZ9dwQJC3riHlQocWqOBjIw==}
+  '@dream.mf/oidc@0.12.1':
+    resolution: {integrity: sha512-o68kEZ36h2ZbokbG00RkwPfJPfGl2dKM0AIFNu0aZQgPsr7xMRIhWABdJOAkk0KB+jTsdiWb7xa7RSH1ntEA9Q==}
     engines: {node: '>=16', npm: '>=8'}
     peerDependencies:
       react: ^18.1.0
@@ -4227,7 +4227,7 @@ snapshots:
       react: 18.1.0
       react-dom: 18.1.0(react@18.1.0)
 
-  '@dream.mf/oidc@0.11.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
+  '@dream.mf/oidc@0.12.1(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
     dependencies:
       '@dream.mf/core': 1.2.7
       '@dream.mf/logging': 1.2.3
