@@ -9,15 +9,15 @@ const baseConfig = withBaseWebpack({
 const zephyrOptions = {
     app: {
         org: 'dream-mf',
-        project: 'Dream.mf',
-        name: 'dream-mf-host-application',
+        project: 'dream-mf-sample-application',
+        name: 'dream-mf-sample-application',
         version: '3.0.0',
     },
     mfConfig: {
         name: 'dream-mf-host-application',
         filename: null,
         exposes: null,
-        remotes: null,
+        remotes: ['dream-mf-remote-home', 'dream-mf-remote-profile', 'dream-mf-remote-sample'],
         shared: null
     }
 };
