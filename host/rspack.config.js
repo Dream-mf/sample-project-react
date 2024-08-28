@@ -17,7 +17,7 @@ const zephyrOptions = {
         name: 'dream-mf-host-application',
         filename: null,
         exposes: null,
-        remotes: ['Home', 'Profile', 'Sample'],
+        remotes: ['dream-mf-remote-home', 'dream-mf-remote-profile', 'dream-mf-remote-sample'],
         shared: null
     }
 };
