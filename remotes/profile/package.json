@@ -17,7 +17,7 @@
 		"@dream.mf/core": "1.2.4",
 		"@dream.mf/logging": "1.2.3",
 		"@dream.mf/bundlers": "0.0.10",
-		"@dream.mf/oidc": "0.12.1"
+		"@dream.mf/oidc": "1.0.0"
 	},
 	"devDependencies": {
 		"@types/node": "^15.0.3",

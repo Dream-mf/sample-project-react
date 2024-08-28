@@ -40,9 +40,8 @@ const App = () => {
                 readOnly
                 disabled
                 style={{ width: "100%", height: 200 }}
-              >
-                {user?.id_token}
-              </textarea>
+                defaultValue={user?.id_token}
+              / >
             </li>
           </ul>
         ) : (

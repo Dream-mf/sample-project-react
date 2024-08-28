@@ -2,7 +2,7 @@
 import React, { Suspense } from "react";
 import { importRemote } from '@dream.mf/utilities';
 import Layout from "../../layout";
-import { DreamMFContextGuard } from "@dream.mf/oidc";
+import { DreamMFAuthGuard } from "@dream.mf/oidc";
 
 
 const ProfileRemote = React.lazy(() =>
@@ -26,11 +26,11 @@ const ProfileHealthRemote = React.lazy(() =>
 const ProfilePage = () => {
     return (
         <Layout>
-            <DreamMFContextGuard fallback={<>Loading...</>}>
+            <DreamMFAuthGuard fallback={<>Hold tight, Logging you in...</>}>
                 <ProfileRemote />
                 <h5>Package Details</h5>
                 <ProfileHealthRemote />
-            </DreamMFContextGuard>
+            </DreamMFAuthGuard>
         </Layout>
     );
 }

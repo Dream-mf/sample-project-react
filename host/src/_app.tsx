@@ -9,9 +9,9 @@ const HostRouter = () => {
   const config = () => {
 		return {
 			...logConfig,
-			logGeneral: (detail) => { console.log('general', detail); },
-			logPageView: (detail) => { console.log('pageView', detail); },
-			logFetch: (detail) => { console.log('fetch', detail); },
+			logGeneral: (detail) => { console.log('#General#', detail); },
+			logException: (detail) => { console.log('#Exception#', detail); },
+			logPageView: (detail) => { console.log('#PageView#', detail); },
 			debug: true,
 		};
 	};

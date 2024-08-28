@@ -1,4 +1,4 @@
-import { DreamMFContextGuard } from "@dream.mf/oidc";
+import { DreamMFAuthGuard } from "@dream.mf/oidc";
 import { NavLink } from "react-router-dom";
 
 export default function Page() {
@@ -20,13 +20,16 @@ export default function Page() {
                 <NavLink className="nav-link" to="/notfound">404</NavLink>
             </li>
             <li className="nav-item" role="presentation">
-                <NavLink className="nav-link" to="/profile">Profile (Auth)</NavLink>
+                <NavLink className="nav-link" to="/profile">Profile (Auth 1)</NavLink>
             </li>
-            <DreamMFContextGuard fallback={<></>}>
+            <li className="nav-item" role="presentation">
+                <NavLink className="nav-link" to="/gated">Gated (Auth 2)</NavLink>
+            </li>
+            <DreamMFAuthGuard stopRedirect={true} fallback={<></>}>
                 <li className="nav-item" role="presentation">
                     <NavLink className="nav-link" to="/logout">Logout</NavLink>
                 </li>
-            </DreamMFContextGuard>
+            </DreamMFAuthGuard>
         </ul>
     )
 }

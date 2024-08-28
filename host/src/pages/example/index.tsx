@@ -9,6 +9,7 @@ const ExamplePage = () => {
         <li className="breadcrumb-item active">Example</li>
       </ol>
       Example page in the host, this is not a remote.
+      <input></input>
     </Layout>
   )
 }
