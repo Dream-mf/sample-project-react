@@ -1,5 +1,6 @@
 # Microfrontends using Module Federation and React
-This is an example application using react (and webpack) as a host, and create react application as remotes. These are dynamically resolved in each page route, and defined either ssr true/false.
+
+This is an example application using react (and webpack/rspack) as a host, and create react application as remotes. These are dynamically resolved in each page route.
 
 ## What is a Microfrontend Architecture?
 
@@ -28,28 +29,10 @@ For now we will keep the structure loose and simple:
 │    ├─── 📁 layout         > Shared layout
 │    └─── 📁 pages          > Routing
 │
-├─── 📁 remotes
-│    ├─── 📁 home           > React Remote using JSX
-│    ├─── 📁 profile        > React Remote using Typescript
-│    └─── 📁 sample         > React Remote using JSX
-│
-├─── 📁 service             > Backend-for-Frontend express api
-│
-├─── 📁 shared              > Packages and components shared across remotes
-```
-
-## What is the shared folder for?
-
-This is a great place to hold utilities, hooks, components, etc for remotes and hosts to use whenever needed. This does not replace the need for a npm repository, but does allow you to share components across remotes without the need to publish a npm package thats really only used for your application.
-
-## What is the service folder?
-
-A common pattern for microfrontends is to include a (BFF) backend-for-frontend service. This can be as simple as a ExpressJS api or a collection of lambda functions. This is also not a requirement of the architecture. For this code example, I included an ExpressJS instance just to get you started.
-
-Once running, visit: `http://localhost:8080/api-docs/`
-
-A BFF can be responsible for handling much of the business logic around fetching and updating data to your services. For our example we will derive remote configuration data from this api. You can replace this with any mechanism later. This allows all remotes to share a single layer of abstraction to avoid each remote dusplicating implementation to common backend services.
-
+└─── 📁 remotes
+     ├─── 📁 home           > React Remote using JSX
+     ├─── 📁 profile        > React Remote using Typescript
+     └─── 📁 sample         > React Remote using JSX
 
 ## Getting started
 Ive really worked hard to keep this extremely simple to stand up.
