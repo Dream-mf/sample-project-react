@@ -1,21 +1,14 @@
-import { Box, CircularProgress, Typography } from '@mui/material';
+import { Paper, Typography, CircularProgress, Box } from '@mui/material';
 
 export default () => {
     return (
-        <Box 
-            sx={{ 
-                display: 'flex', 
-                flexDirection: 'column',
-                alignItems: 'center', 
-                justifyContent: 'center',
-                height: '100vh',
-                gap: 2
-            }}
-        >
-            <CircularProgress size={40} />
-            <Typography variant="body1" color="text.secondary">
-                Loading page...
+        <Paper elevation={2} sx={{ p: 4, borderRadius: 2, textAlign: 'center' }}>
+            <Typography variant="h2" component="h1" sx={{ mb: 2 }}>
+                <CircularProgress size={60} thickness={2} />
             </Typography>
-        </Box>
+            <Typography variant="h5" color="text.secondary">
+                Loading...
+            </Typography>
+        </Paper>
     );
 };

@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { Helmet } from "react-helmet";
 import { DreamMFLogClient } from '@dream.mf/logging';
+import { Typography } from "@mui/material";
 
 const App = () => {
   useEffect(() => {
@@ -13,8 +14,12 @@ const App = () => {
         <title>Microfrontends | Home</title>
       </Helmet>
       <div>
-        <h2>Remote App - Home</h2>
-        <p>This is the home remote application.</p>
+        <Typography variant="h4" component="h1" sx={{ mb: 3 }}>
+          Remote App - Home
+        </Typography>
+        <Typography variant="body1">
+          This is the home remote application.
+        </Typography>
       </div>
     </>
   );
