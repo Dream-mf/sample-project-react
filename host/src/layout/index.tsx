@@ -34,7 +34,7 @@ interface LayoutProps {
 
 const Layout = ({ children }: LayoutProps) => {
   return (
-    <Suspense fallback={<PageLoader />}>
+    
       <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
         <Header />
         <Subnav />
@@ -43,7 +43,6 @@ const Layout = ({ children }: LayoutProps) => {
         </Container>
         <Footer />
       </Box>
-    </Suspense>
   );
 };
 

@@ -1,6 +1,7 @@
-import React from "react";
+import React, { Suspense } from "react";
 import { importRemote } from '@dream.mf/utilities';
 import Layout from "../../layout";
+import PageLoader from "../../components/page-loader";
 
 // @ts-ignore
 const HomeRemote = React.lazy(() =>
@@ -13,7 +14,13 @@ const HomeRemote = React.lazy(() =>
 );
 
 const HomePage = () => {
-    return (<Layout><HomeRemote /></Layout>);
+    return (
+    <Layout>
+        <Suspense fallback={<PageLoader />}>
+            <HomeRemote />
+        </Suspense>
+    </Layout>
+    );
 }
 
 export default HomePage;
