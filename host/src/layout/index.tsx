@@ -1,17 +1,32 @@
-import React, { Suspense } from "react";
+import React, { Suspense, useState } from "react";
 import { NavLink } from "react-router-dom";
 import PageLoader from "../components/page-loader";
 import Subnav from "./subnav";
 import Footer from "./footer";
+import { AppBar, Box, Container, Drawer, IconButton, Toolbar, Typography } from "@mui/material";
+import MenuIcon from "@mui/icons-material/Menu";
+import HomeIcon from "@mui/icons-material/Home";
 
-import '../assets/styles/main.scss';
+const Header = () => {
+  const [mobileOpen, setMobileOpen] = useState(false);
 
-const Header = () => (
-  <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
-    <i className="fas fa-bars fa-lg sidemenu-toggle-icon"></i>
-    <NavLink to="/" className="navbar-brand">Microfrontend Site</NavLink>
-  </nav>
-);
+  const handleDrawerToggle = () => {
+    setMobileOpen(!mobileOpen);
+  };
+
+  return (
+    <AppBar position="static">
+      <Toolbar>
+        <NavLink to="/" style={{ color: 'white', textDecoration: 'none', display: 'flex', alignItems: 'center' }}>
+          <HomeIcon sx={{ mr: 1 }} />
+          <Typography variant="h6" noWrap component="div">
+            Microfrontend Site
+          </Typography>
+        </NavLink>
+      </Toolbar>
+    </AppBar>
+  );
+};
 
 interface LayoutProps {
   children: React.ReactNode
@@ -20,10 +35,14 @@ interface LayoutProps {
 const Layout = ({ children }: LayoutProps) => {
   return (
     <Suspense fallback={<PageLoader />}>
-      <Header />
-      <Subnav />
-      <div className="container mt-4">{children}</div>
-      <Footer />
+      <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+        <Header />
+        <Subnav />
+        <Container sx={{ flex: 1, mt: '5px', py: 2 }}>
+          {children}
+        </Container>
+        <Footer />
+      </Box>
     </Suspense>
   );
 };

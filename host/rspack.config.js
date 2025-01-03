@@ -1,6 +1,6 @@
-const { withBaseRSPack } = require("@dream.mf/bundlers");
+const { withBaseRspack } = require("@dream.mf/bundlers");
 
-const config = withBaseRSPack({
+const config = withBaseRspack({
 		devServer: { port: 3000 },
 		federationConfig: { name: "container" },
 	},
