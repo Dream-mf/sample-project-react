@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { Helmet } from "react-helmet";
 import { DreamMFLogClient } from "@dream.mf/logging";
 import { DreamMFRequestInit, useDreamAuth } from "@dream.mf/oidc";
+import { Typography } from "@mui/material";
 
 const App = () => {
   const { user, isAuthenticated } = useDreamAuth();
@@ -25,11 +26,9 @@ const App = () => {
         <title>Microfrontends | Profile</title>
       </Helmet>
       <div>
-        <ol className="breadcrumb">
-          <li className="breadcrumb-item">Home</li>
-          <li className="breadcrumb-item active">Profile</li>
-        </ol>
-        <h2>My Profile</h2>
+        <Typography variant="h4" component="h1" sx={{ mb: 3 }}>
+          Remote App - My Profile
+        </Typography>
         {isAuthenticated ? (
           <ul>
             <li>Nickname: {user?.profile.nickname}</li>

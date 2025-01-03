@@ -17,7 +17,11 @@
 		"@dream.mf/core": "1.2.4",
 		"@dream.mf/logging": "1.2.3",
 		"@dream.mf/bundlers": "0.4.0",
-		"@dream.mf/oidc": "1.0.0"
+		"@dream.mf/oidc": "1.0.0",
+		"@mui/material": "^5.15.5",
+		"@mui/icons-material": "^5.15.5",
+		"@emotion/react": "^11.11.3",
+		"@emotion/styled": "^11.11.0"
 	},
 	"devDependencies": {
 		"@types/node": "^15.0.3",
