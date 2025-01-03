@@ -1,6 +1,9 @@
-import React from "react";
+import React, { Suspense } from "react";
 import { importRemote } from '@dream.mf/utilities';
 import Layout from "../../layout";
+import PageLoader from "../../components/page-loader";
+import PageBreadcrumbs from "../../components/breadcrumb";
+import { Paper } from "@mui/material";
 
 // @ts-ignore
 const HomeRemote = React.lazy(() =>
@@ -13,7 +16,16 @@ const HomeRemote = React.lazy(() =>
 );
 
 const HomePage = () => {
-    return (<Layout><HomeRemote /></Layout>);
+    return (
+        <Layout>
+            <PageBreadcrumbs items={[{ label: 'Remote App - Home' }]} />
+            <Paper elevation={2} sx={{ p: 4, borderRadius: 2 }}>
+                <Suspense fallback={<PageLoader />}>
+                    <HomeRemote />
+                </Suspense>
+            </Paper>
+        </Layout>
+    );
 }
 
 export default HomePage;

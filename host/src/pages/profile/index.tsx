@@ -1,9 +1,10 @@
-
 import React, { Suspense } from "react";
 import { importRemote } from '@dream.mf/utilities';
 import Layout from "../../layout";
 import { DreamMFAuthGuard } from "@dream.mf/oidc";
-
+import PageLoader from "../../components/page-loader";
+import PageBreadcrumbs from "../../components/breadcrumb";
+import { Paper, Typography, Divider } from "@mui/material";
 
 const ProfileRemote = React.lazy(() =>
     importRemote({
@@ -26,13 +27,30 @@ const ProfileHealthRemote = React.lazy(() =>
 const ProfilePage = () => {
     return (
         <Layout>
-            <DreamMFAuthGuard fallback={<>Hold tight, Logging you in...</>}>
-                <ProfileRemote />
-                <h5>Package Details</h5>
-                <ProfileHealthRemote />
+            <PageBreadcrumbs items={[
+                { label: 'Profile', href: '/profile' },
+                { label: 'Details' }
+            ]} />
+            <DreamMFAuthGuard fallback={
+                <Paper elevation={2} sx={{ p: 4, borderRadius: 2, textAlign: 'center' }}>
+                    <Typography variant="h5" color="text.secondary">
+                        Hold tight, Logging you in...
+                    </Typography>
+                </Paper>
+            }>
+                <Paper elevation={2} sx={{ p: 4, borderRadius: 2 }}>
+                    <Suspense fallback={<PageLoader />}>
+                        <ProfileRemote />
+                        <Divider sx={{ my: 3 }} />
+                        <Typography variant="h5" sx={{ mb: 2 }}>
+                            Package Details
+                        </Typography>
+                        <ProfileHealthRemote />
+                    </Suspense>
+                </Paper>
             </DreamMFAuthGuard>
         </Layout>
     );
-}
+};
 
 export default ProfilePage;

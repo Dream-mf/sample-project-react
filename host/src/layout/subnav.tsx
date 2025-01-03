@@ -1,35 +1,70 @@
 import { DreamMFAuthGuard } from "@dream.mf/oidc";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
+import { Box, Tabs, Tab, Container } from "@mui/material";
+
+const routes = [
+    { path: "/", label: "Root" },
+    { path: "/sample/123456", label: "Sample" },
+    { path: "/home", label: "Home" },
+    { path: "/example", label: "Example" },
+    { path: "/notfound", label: "404" },
+    { path: "/profile", label: "Profile (Auth 1)" },
+    { path: "/gated", label: "Gated (Auth 2)" },
+    { path: "/logout", label: "Logout", requiresAuth: true }
+];
 
 export default function Page() {
+    const location = useLocation();
+    
+    // Get the current route index based on pathname
+    const getCurrentTabIndex = () => {
+        const currentPath = location.pathname;
+        const index = routes.findIndex(route => {
+            if (route.path === '/') {
+                return currentPath === '/';
+            }
+            return currentPath.startsWith(route.path);
+        });
+        return index >= 0 ? index : 0;
+    };
+
     return (
-        <ul className="nav nav-tabs" role="tablist">
-            <li className="nav-item" role="presentation">
-                <NavLink className="nav-link" to="/">Root</NavLink>
-            </li>
-            <li className="nav-item" role="presentation">
-                <NavLink className="nav-link" to="/sample/123456">Sample</NavLink>
-            </li>
-            <li className="nav-item" role="presentation">
-                <NavLink className="nav-link" to="/home">Home</NavLink>
-            </li>
-            <li className="nav-item" role="presentation">
-                <NavLink className="nav-link" to="/example">Example</NavLink>
-            </li>
-            <li className="nav-item" role="presentation">
-                <NavLink className="nav-link" to="/notfound">404</NavLink>
-            </li>
-            <li className="nav-item" role="presentation">
-                <NavLink className="nav-link" to="/profile">Profile (Auth 1)</NavLink>
-            </li>
-            <li className="nav-item" role="presentation">
-                <NavLink className="nav-link" to="/gated">Gated (Auth 2)</NavLink>
-            </li>
-            <DreamMFAuthGuard stopRedirect={true} fallback={<></>}>
-                <li className="nav-item" role="presentation">
-                    <NavLink className="nav-link" to="/logout">Logout</NavLink>
-                </li>
-            </DreamMFAuthGuard>
-        </ul>
-    )
+        <Box sx={{ borderBottom: 1, borderColor: 'divider', bgcolor: 'background.paper' }}>
+            <Container>
+                <Tabs 
+                    value={getCurrentTabIndex()}
+                    variant="scrollable"
+                    scrollButtons="auto"
+                    allowScrollButtonsMobile
+                    sx={{
+                        '& .MuiTab-root': {
+                            textTransform: 'none',
+                            minHeight: 48,
+                        },
+                    }}
+                >
+                    {routes.map((route) => (
+                        route.requiresAuth ? (
+                            <DreamMFAuthGuard key={route.path} stopRedirect={true} fallback={<></>}>
+                                <Tab 
+                                    label={route.label}
+                                    component={NavLink}
+                                    to={route.path}
+                                    sx={{ color: 'inherit' }}
+                                />
+                            </DreamMFAuthGuard>
+                        ) : (
+                            <Tab 
+                                key={route.path}
+                                label={route.label}
+                                component={NavLink}
+                                to={route.path}
+                                sx={{ color: 'inherit' }}
+                            />
+                        )
+                    ))}
+                </Tabs>
+            </Container>
+        </Box>
+    );
 }

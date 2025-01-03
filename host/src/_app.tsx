@@ -3,6 +3,9 @@ import Routing from "./_routing";
 import { useEffect } from "react";
 import { DreamMFLogClient, DreamMFLogListener, logConfig } from '@dream.mf/logging';
 import { BaseAuthConfig, DreamMFAuthConfig, DreamMFAuthProvider } from "@dream.mf/oidc";
+import { ThemeProvider } from '@mui/material/styles';
+import CssBaseline from '@mui/material/CssBaseline';
+import { theme } from './theme';
 
 const HostRouter = () => {
   
@@ -36,14 +39,15 @@ const HostRouter = () => {
 	}, [])
 
   return (
-    <>
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
       <DreamMFLogListener config={config()} />
       <DreamMFAuthProvider config={authConfig()}>
         <BrowserRouter>
           <Routing />
         </BrowserRouter>
       </DreamMFAuthProvider>
-    </>
+    </ThemeProvider>
   );
 };
 

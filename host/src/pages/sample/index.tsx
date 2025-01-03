@@ -1,7 +1,10 @@
-import React from "react";
+import React, { Suspense } from "react";
 import { useParams } from "react-router-dom";
 import { importRemote, ImportRemoteOptions } from '@dream.mf/utilities';
 import Layout from "../../layout";
+import PageLoader from "../../components/page-loader";
+import PageBreadcrumbs from "../../components/breadcrumb";
+import { Paper } from "@mui/material";
 
 // @ts-ignore
 const SampleRemote = React.lazy(() =>
@@ -10,16 +13,24 @@ const SampleRemote = React.lazy(() =>
         scope: 'remote_sample',
         module: 'Application',
         remoteUrlFallback: null
-    } as ImportRemoteOptions)
+    })
 );
 
 const SamplePage = () => {
     let { id } = useParams();
     return (
         <Layout>
-            <SampleRemote id={id} />
+            <PageBreadcrumbs items={[
+                { label: 'Sample', href: '/sample/123456' },
+                { label: id }
+            ]} />
+            <Paper elevation={2} sx={{ p: 4, borderRadius: 2 }}>
+                <Suspense fallback={<PageLoader />}>
+                    <SampleRemote id={id} />
+                </Suspense>
+            </Paper>
         </Layout>
     );
-}
+};
 
 export default SamplePage;
